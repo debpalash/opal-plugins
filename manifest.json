@@ -3,29 +3,224 @@
   "name": "Opal Plugins",
   "description": "Source endpoints for Opal. The app holds the connector code; these supply the URLs and enable the source. Install writes ~/.config/zigzag/plugins/sources/<id>.json. Torrent ids match the nova2 engine that runs them; stremio entries add a Stremio add-on (one URL, many sources).",
   "plugins": [
-    { "id": "apibay",         "name": "The Pirate Bay",  "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://apibay.org" } },
-    { "id": "one337x",        "name": "1337x",           "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://1337x.to" } },
-    { "id": "yts",            "name": "YTS (movies)",    "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://yts.mx", "api": "https://yts.mx/api/v2/list_movies.json" } },
-    { "id": "eztv",           "name": "EZTV (TV)",       "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://eztvx.to", "api": "https://eztvx.to/api/get-torrents" } },
-    { "id": "nyaa",           "name": "Nyaa (anime)",    "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://nyaa.si" } },
-    { "id": "kickass",        "name": "KickAss",         "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://kickasstorrents.to" } },
-    { "id": "limetorrents",   "name": "LimeTorrents",    "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://www.limetorrents.lol" } },
-    { "id": "torlock",        "name": "TorLock",         "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://www.torlock.com" } },
-    { "id": "torrentproject", "name": "TorrentProject",  "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://torrentproject2.net" } },
-    { "id": "torrentscsv",    "name": "Torrents-CSV",    "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://torrents-csv.com" } },
-    { "id": "solidtorrents",  "name": "SolidTorrents",   "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://solidtorrents.to" } },
-    { "id": "uindex",         "name": "UIndex",          "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://uindex.org" } },
-    { "id": "jackett",        "name": "Jackett (self-hosted)", "type": "torrent", "version": "1.0.0", "endpoints": { "base": "http://127.0.0.1:9117" } },
-    { "id": "readallcomics",  "name": "ReadAllComics",   "type": "comics",  "version": "1.0.0", "endpoints": { "base": "https://readallcomics.com" } },
-    { "id": "animepahe",      "name": "AnimePahe",       "type": "anime",   "version": "1.0.0", "endpoints": { "base": "https://animepahe.pw" } },
-
-    { "id": "torrentio",      "name": "Torrentio (Stremio)",   "type": "stremio", "version": "1.0.0", "endpoints": { "stremio": "https://torrentio.strem.fun/manifest.json", "types": "movie,series" } },
-    { "id": "mediafusion",    "name": "MediaFusion (Stremio)", "type": "stremio", "version": "1.0.0", "endpoints": { "stremio": "https://mediafusion.elfhosted.com/manifest.json", "types": "movie,series" } },
-    { "id": "comet",          "name": "Comet · debrid (Stremio)", "type": "stremio", "version": "1.0.0", "endpoints": { "stremio": "https://comet.elfhosted.com/manifest.json", "types": "movie,series" } },
-    { "id": "knightcrawler",  "name": "KnightCrawler (Stremio)", "type": "stremio", "version": "1.0.0", "endpoints": { "stremio": "https://knightcrawler.elfhosted.com/manifest.json", "types": "movie,series" } },
-    { "id": "cyberflix",      "name": "CyberFlix (Stremio)",   "type": "stremio", "version": "1.0.0", "endpoints": { "stremio": "https://cyberflix.elfhosted.com/manifest.json", "types": "movie,series" } },
-    { "id": "thepiratebay-plus", "name": "ThePirateBay+ (Stremio)", "type": "stremio", "version": "1.0.0", "endpoints": { "stremio": "https://thepiratebay-plus.strem.fun/manifest.json", "types": "movie,series" } },
-    { "id": "anime-kitsu",    "name": "Anime Kitsu (Stremio)", "type": "stremio", "version": "1.0.0", "endpoints": { "stremio": "https://anime-kitsu.strem.fun/manifest.json", "types": "anime,series" } },
-    { "id": "opensubtitles",  "name": "OpenSubtitles v3 (Stremio)", "type": "stremio", "version": "1.0.0", "endpoints": { "stremio": "https://opensubtitles-v3.strem.io/manifest.json", "types": "movie,series" } }
+    {
+      "id": "apibay",
+      "name": "The Pirate Bay",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://apibay.org"
+      }
+    },
+    {
+      "id": "one337x",
+      "name": "1337x",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://1337x.to"
+      }
+    },
+    {
+      "id": "yts",
+      "name": "YTS (movies)",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://yts.mx",
+        "api": "https://yts.mx/api/v2/list_movies.json"
+      }
+    },
+    {
+      "id": "eztv",
+      "name": "EZTV (TV)",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://eztvx.to",
+        "api": "https://eztvx.to/api/get-torrents"
+      }
+    },
+    {
+      "id": "nyaa",
+      "name": "Nyaa (anime)",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://nyaa.si"
+      }
+    },
+    {
+      "id": "kickass",
+      "name": "KickAss",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://kickasstorrents.to"
+      }
+    },
+    {
+      "id": "limetorrents",
+      "name": "LimeTorrents",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://www.limetorrents.lol"
+      }
+    },
+    {
+      "id": "torlock",
+      "name": "TorLock",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://www.torlock.com"
+      }
+    },
+    {
+      "id": "torrentproject",
+      "name": "TorrentProject",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://torrentproject2.net"
+      }
+    },
+    {
+      "id": "torrentscsv",
+      "name": "Torrents-CSV",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://torrents-csv.com"
+      }
+    },
+    {
+      "id": "solidtorrents",
+      "name": "SolidTorrents",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://solidtorrents.to"
+      }
+    },
+    {
+      "id": "uindex",
+      "name": "UIndex",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://uindex.org"
+      }
+    },
+    {
+      "id": "jackett",
+      "name": "Jackett (self-hosted)",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "http://127.0.0.1:9117"
+      }
+    },
+    {
+      "id": "readallcomics",
+      "name": "ReadAllComics",
+      "type": "comics",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://readallcomics.com"
+      }
+    },
+    {
+      "id": "animepahe",
+      "name": "AnimePahe",
+      "type": "anime",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://animepahe.pw"
+      }
+    },
+    {
+      "id": "torrentio",
+      "name": "Torrentio (Stremio)",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://torrentio.strem.fun/manifest.json",
+        "types": "movie,series",
+        "debrid": "https://torrentio.strem.fun/{provider}={key}/manifest.json"
+      }
+    },
+    {
+      "id": "mediafusion",
+      "name": "MediaFusion (Stremio)",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://mediafusion.elfhosted.com/manifest.json",
+        "types": "movie,series"
+      }
+    },
+    {
+      "id": "comet",
+      "name": "Comet \u00b7 debrid (Stremio)",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://comet.elfhosted.com/manifest.json",
+        "types": "movie,series"
+      }
+    },
+    {
+      "id": "knightcrawler",
+      "name": "KnightCrawler (Stremio)",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://knightcrawler.elfhosted.com/manifest.json",
+        "types": "movie,series"
+      }
+    },
+    {
+      "id": "cyberflix",
+      "name": "CyberFlix (Stremio)",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://cyberflix.elfhosted.com/manifest.json",
+        "types": "movie,series"
+      }
+    },
+    {
+      "id": "thepiratebay-plus",
+      "name": "ThePirateBay+ (Stremio)",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://thepiratebay-plus.strem.fun/manifest.json",
+        "types": "movie,series",
+        "debrid": "https://thepiratebay-plus.strem.fun/{provider}={key}/manifest.json"
+      }
+    },
+    {
+      "id": "anime-kitsu",
+      "name": "Anime Kitsu (Stremio)",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://anime-kitsu.strem.fun/manifest.json",
+        "types": "anime,series"
+      }
+    },
+    {
+      "id": "opensubtitles",
+      "name": "OpenSubtitles v3 (Stremio)",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://opensubtitles-v3.strem.io/manifest.json",
+        "types": "movie,series"
+      }
+    }
   ]
 }
