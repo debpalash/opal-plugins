@@ -1,0 +1,4 @@
+{
+  "base": "https://eztvx.to",
+  "api": "https://eztvx.to/api/get-torrents"
+}

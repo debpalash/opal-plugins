@@ -1,0 +1,5 @@
+{
+  "stremio": "https://thepiratebay-plus.strem.fun/manifest.json",
+  "types": "movie,series",
+  "debrid": "https://thepiratebay-plus.strem.fun/{provider}={key}/manifest.json"
+}

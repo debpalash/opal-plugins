@@ -1,0 +1,5 @@
+{
+  "stremio": "https://torrentio.strem.fun/manifest.json",
+  "types": "movie,series",
+  "debrid": "https://torrentio.strem.fun/{provider}={key}/manifest.json"
+}
