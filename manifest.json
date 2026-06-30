@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "name": "Opal Plugins",
+  "description": "Source endpoints/credentials for Opal. The app holds the connector code; these supply the URLs/keys. Installing a plugin enables that source.",
+  "plugins": [
+    { "id": "1337x",         "name": "1337x",        "type": "torrent", "version": "1.0.0", "endpoints": { "base": "https://1337x.to" } },
+    { "id": "yts",           "name": "YTS",          "type": "torrent", "version": "1.0.0", "endpoints": { "api":  "https://yts.mx/api/v2/list_movies.json" } },
+    { "id": "eztv",          "name": "EZTV",         "type": "torrent", "version": "1.0.0", "endpoints": { "api":  "https://eztvx.to/api/get-torrents" } },
+    { "id": "readallcomics", "name": "ReadAllComics","type": "comics",  "version": "1.0.0", "endpoints": { "base": "https://readallcomics.com" } },
+    { "id": "allanime",      "name": "AllAnime",     "type": "anime",   "version": "1.0.0", "endpoints": { "api":  "https://api.allanime.day" } },
+    { "id": "animepahe",     "name": "AnimePahe",    "type": "anime",   "version": "1.0.0", "endpoints": { "base": "https://animepahe.pw" } }
+  ]
+}
