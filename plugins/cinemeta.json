@@ -1,0 +1,4 @@
+{
+  "stremio": "https://v3-cinemeta.strem.io/manifest.json",
+  "types": "movie,series"
+}
