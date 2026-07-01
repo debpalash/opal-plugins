@@ -4,7 +4,7 @@ Source **endpoints and credentials** for [Opal](https://github.com/debpalash/Opa
 
 Opal ships with the connector *code* but **no live source URLs**. Each entry in
 `manifest.json` supplies the URL/API/keys for one source. Opal's in-app **Plugins**
-manager installs a selected source into `~/.config/zigzag/plugins/sources/<id>.json`;
+manager installs a selected source into `~/.config/opal/plugins/sources/<id>.json`;
 until then that source is inert.
 
 ## Trust & responsibility

@@ -1,0 +1,4 @@
+{
+  "stremio": "https://tmdb.elfhosted.com/manifest.json",
+  "types": "movie,series"
+}
