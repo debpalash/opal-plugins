@@ -424,8 +424,8 @@
     },
     {
       "id": "lists",
-      "name": "Anime/Manga ID lists (AniList↔MAL↔AniDB)",
-      "type": "metadata",
+      "name": "Anime Lists (airing index)",
+      "type": "anime",
       "version": "1.0.0",
       "endpoints": {
         "base": "https://raw.githubusercontent.com/debpalash/opal-plugins/main/lists"
