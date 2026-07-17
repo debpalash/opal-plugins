@@ -1,0 +1,76 @@
+{
+  "note": "Curated direct-download (DDL) source candidates for Opal. WARNING: the aggregator DDL lists are ~140 regional movie/TV blog sites (vegamovies/pahe/moviesflix/hdhub clones) that rotate domains constantly and each need bespoke scraping — high rot, low durability. Only the more stable release-group indexes and the anime-DDL sources (which have cleaner structure) are cataloged here; the regional-blog firehose is excluded. Source: FMHY video 'Download Sites' + 'Anime DDL' sections. None in the live manifest.",
+  "schema": 1,
+  "release_group_ddl": [
+    {
+      "id": "hdencode",
+      "name": "HDEncode",
+      "type": "ddl",
+      "url": "https://hdencode.org",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Release-scene DDL index (encodes, links to filehosts). More structured/durable than the regional blogs."
+    },
+    {
+      "id": "rapidmoviez",
+      "name": "RapidMoviez",
+      "type": "ddl",
+      "url": "https://rmz.cr",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Long-running release DDL index."
+    },
+    {
+      "id": "psarips",
+      "name": "PSArips",
+      "type": "ddl",
+      "url": "https://psa.wf",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "PSA release group DDL. Filehost links (needs a debrid/host resolver downstream)."
+    }
+  ],
+  "anime_ddl": [
+    {
+      "id": "nibl",
+      "name": "nibl",
+      "type": "anime-ddl",
+      "url": "https://nibl.co.uk",
+      "api": "https://api.nibl.co.uk (documented JSON — XDCC bot pack index)",
+      "engine": "needs:json-adapter (+ XDCC/IRC fetch, non-trivial transport)",
+      "reachable": "unknown",
+      "notes": "XDCC pack search API. Clean JSON, but delivery is over IRC XDCC — a transport Opal doesn't have. Catalog now, transport later."
+    },
+    {
+      "id": "kayoanime",
+      "name": "Kayoanime",
+      "type": "anime-ddl",
+      "url": "https://kayoanime.com",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Google-Drive-backed anime DDL. Link-resolution is the hard part."
+    },
+    {
+      "id": "hi10anime",
+      "name": "Hi10Anime",
+      "type": "anime-ddl",
+      "url": "https://hi10anime.com",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "10-bit anime encodes, DDL. Free account may be needed."
+    },
+    {
+      "id": "anidl",
+      "name": "AniDL",
+      "type": "anime-ddl",
+      "url": "https://new.anidl.org",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Anime DDL index."
+    }
+  ],
+  "excluded_regional_blogs": {
+    "reason": "~140 regional movie/TV DDL blogs (vegamovies, pahe, moviesflix, hdhub, worldfree4u, katmoviehd, etc.) with monthly domain churn and per-site scraping. Not durable; a debrid/Stremio-addon path serves the same need far more stably.",
+    "count_seen": 140
+  }
+}

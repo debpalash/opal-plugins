@@ -1,0 +1,86 @@
+{
+  "note": "Curated music/audio source candidates for Opal (has a radio tab + youtube/music path). Split by legality: `legal_api` are free/licensed APIs safe to wire directly; `stream_rippers` pull from paid services (Qobuz/Tidal/Deezer) and are the piracy-class ones. `lyrics` is a standout freebie. Source: FMHY audio list. None in the live manifest yet.",
+  "schema": 1,
+  "legal_api": [
+    {
+      "id": "lrclib",
+      "name": "LRCLIB",
+      "type": "lyrics",
+      "url": "https://lrclib.net",
+      "api": "https://lrclib.net/api/get?artist_name=&track_name= (free, no key, synced+plain lyrics)",
+      "engine": "needs:json-adapter (trivial)",
+      "reachable": "unknown",
+      "notes": "LEGAL, free, keyless lyrics API. Highest-value + lowest-effort music add — pairs with any now-playing track."
+    },
+    {
+      "id": "cobalt",
+      "name": "cobalt",
+      "type": "downloader-api",
+      "url": "https://cobalt.tools",
+      "api": "POST https://api.cobalt.tools/ (open-source, documented; self-hostable instance)",
+      "engine": "needs:json-adapter",
+      "reachable": "unknown",
+      "notes": "Open-source media downloader API (YouTube/SoundCloud/etc. → direct audio). A TOOL more than a source, but a clean way to fetch audio for the music path. Self-host to avoid public-instance rate limits."
+    },
+    {
+      "id": "bandcamp",
+      "name": "Bandcamp",
+      "type": "music-stream",
+      "url": "https://bandcamp.com",
+      "api": "unofficial (mobile API); legal artist-uploaded catalog",
+      "engine": "needs:adapter",
+      "reachable": "unknown",
+      "notes": "Legal, artist-licensed. Good for discovery + streaming free/name-your-price tracks."
+    },
+    {
+      "id": "audius",
+      "name": "Audius",
+      "type": "music-stream",
+      "url": "https://audius.co",
+      "api": "https://api.audius.co (documented, keyless, decentralized)",
+      "engine": "needs:json-adapter",
+      "reachable": "unknown",
+      "notes": "Fully legal decentralized music, open API. Strong fit for a streaming music tab."
+    },
+    {
+      "id": "khinsider",
+      "name": "KHInsider",
+      "type": "music-download",
+      "url": "https://downloads.khinsider.com",
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Video-game soundtrack archive (MP3/FLAC). Niche but durable and popular."
+    }
+  ],
+  "stream_rippers": [
+    {
+      "id": "lucida",
+      "name": "lucida",
+      "type": "music-download",
+      "url": "https://lucida.to",
+      "engine": "needs:adapter",
+      "reachable": "unknown",
+      "notes": "Rips lossless from Qobuz/Tidal/Deezer/Amazon. Piracy-class (paid-service extraction) — gate like a torrent source if wired."
+    },
+    {
+      "id": "doubledouble",
+      "name": "DoubleDouble",
+      "type": "music-download",
+      "url": "https://doubledouble.top",
+      "engine": "needs:adapter",
+      "reachable": "unknown",
+      "notes": "Same class as lucida — paid-service ripper. Piracy-class."
+    },
+    {
+      "id": "squidwtf",
+      "name": "squid.wtf",
+      "type": "music-download",
+      "url": "https://squid.wtf",
+      "engine": "needs:adapter",
+      "reachable": "unknown",
+      "notes": "Qobuz/Tidal ripper. Piracy-class."
+    }
+  ],
+  "note_soulseek": "The classic p2p music source (Soulseek/slskd) is a protocol, not a URL endpoint — it would need a client integration, not a plugin entry."
+}
