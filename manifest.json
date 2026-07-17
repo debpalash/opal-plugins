@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "name": "Opal Plugins",
-  "description": "Source endpoints for Opal. The app holds the connector code; these supply the URLs and enable the source. Install writes ~/.config/zigzag/plugins/sources/<id>.json. Torrent ids match the nova2 engine that runs them; stremio entries add a Stremio add-on (one URL, many sources).",
+  "description": "Source endpoints for Opal. The app holds the connector code; these supply the URLs and enable the source. Install writes ~/.config/opal/plugins/sources/<id>.json. Torrent ids match the nova2 engine that runs them; stremio entries add a Stremio add-on (one URL, many sources).",
   "plugins": [
     {
       "id": "apibay",
@@ -180,7 +180,7 @@
     },
     {
       "id": "comet",
-      "name": "Comet \u00b7 debrid (Stremio)",
+      "name": "Comet · debrid (Stremio)",
       "type": "stremio",
       "version": "1.0.0",
       "endpoints": {
@@ -421,6 +421,16 @@
         "base": "https://www.torrentfunk2.com"
       },
       "file": "plugins/torrentfunk.json"
+    },
+    {
+      "id": "lists",
+      "name": "Anime/Manga ID lists (AniList↔MAL↔AniDB)",
+      "type": "metadata",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://raw.githubusercontent.com/debpalash/opal-plugins/main/lists"
+      },
+      "file": "plugins/lists.json"
     }
   ]
 }

@@ -15,3 +15,12 @@ These entries are endpoints only; no media is hosted here.
 
 ## Format
 `manifest.json` → `plugins[]`: `{ id, name, type, version, endpoints{}, [headers{}], [key] }`.
+
+## Bundled data (`lists/`)
+Unlike the endpoint entries above, `lists/` holds actual **data files** — the
+AniList ↔ MAL ↔ AniDB id mappings Opal's anime tab reads (`anime-airing.json` and
+the fuller `anime*.json` / `manga*.json` snapshots). Served raw from
+`https://raw.githubusercontent.com/debpalash/opal-plugins/main/lists/…` and
+exposed as the `lists` plugin so an alternate mirror can override the base.
+Consolidated here from the former `debpalash/lists` repo, which is now an
+archived mirror. See [`lists/README.md`](lists/README.md) for the schema.
