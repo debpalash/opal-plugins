@@ -71,7 +71,7 @@
       "type": "torrent",
       "version": "1.0.0",
       "endpoints": {
-        "base": "https://www.limetorrents.lol"
+        "base": "https://www.limetorrents.fun"
       },
       "file": "plugins/limetorrents.json"
     },
@@ -368,7 +368,7 @@
       "type": "torrent",
       "version": "1.0.0",
       "endpoints": {
-        "base": "https://bitsearch.to"
+        "base": "https://bitsearch.eu"
       },
       "file": "plugins/bitsearch.json"
     },

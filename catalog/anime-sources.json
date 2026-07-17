@@ -1,0 +1,42 @@
+{
+  "note": "Curated anime-source candidates for Opal. IMPORTANT: the FMHY/aggregator anime lists contain 60+ ad-supported streaming SPA sites (Miruro-clones, Aniwave-clones, etc.) that rotate domains monthly and do NOT fit Opal's model — Opal streams anime via torrents (nyaa/shanaproject/nekobt, see torrent-sources.json), the AllAnime/AnimePahe scrapers (already wired), and metadata via Jikan/AniList. Those SPA sites are deliberately EXCLUDED as non-durable. Listed here are only sources with a real API or that fit an existing scraper engine. Deduped against allanime, animepahe, anime-kitsu, and the dooplay/animestream engines Opal already has.",
+  "schema": 1,
+  "api_backed": [
+    {
+      "id": "animeparadise",
+      "name": "AnimeParadise",
+      "type": "anime",
+      "url": "https://www.animeparadise.moe",
+      "api": "https://api.animeparadise.moe (JSON)",
+      "engine": "needs:json-adapter",
+      "reachable": "unknown",
+      "notes": "Open JSON API backend — cleanest integration candidate of the anime set."
+    },
+    {
+      "id": "animeonsen",
+      "name": "AnimeOnsen",
+      "type": "anime",
+      "url": "https://animeonsen.xyz",
+      "api": "https://api.animeonsen.xyz/v4 (documented, OAuth client-credentials)",
+      "engine": "needs:json-adapter",
+      "reachable": "unknown",
+      "notes": "Documented v4 API; requires a client id/secret (like a keyed plugin). Dubbed-heavy catalog."
+    },
+    {
+      "id": "miruro",
+      "name": "Miruro",
+      "type": "anime",
+      "url": "https://www.miruro.com",
+      "api": "consumet/anilist-style backend",
+      "engine": "needs:json-adapter",
+      "reachable": "unknown",
+      "notes": "Rides a Consumet/AniList backend; if it exposes a stable proxy, one adapter could cover several front-ends."
+    }
+  ],
+  "excluded_streaming_spas": {
+    "reason": "60+ ad-streaming web UIs (e.g. aniwave/hianime clones) with monthly domain churn and no stable API. Not durable as endpoint plugins; Opal covers anime streaming via torrents + AllAnime/AnimePahe scrapers instead.",
+    "count_seen": 60,
+    "examples": ["hianime/aniwave clones", "123anime", "kaa.lt (KickAssAnime)", "animetsu", "animex"]
+  },
+  "manga_note": "Anime-adjacent manga sources (mangafire, weebcentral, manganato) are in reading-sources.json."
+}

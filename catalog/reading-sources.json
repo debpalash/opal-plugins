@@ -1,0 +1,105 @@
+{
+  "note": "Curated manga/comic/light-novel/ebook source candidates for Opal. Same rules as torrent-sources.json: not in the live manifest; each needs a matching app engine (or fits an existing one — see `engine`). Deduped against sources Opal already handles: MangaDex (hardcoded keyless), Nyaa (torrent), and the existing readallcomics / heancms / mangathemesia / madara / novels scrapers. Source: FMHY reading list.",
+  "schema": 1,
+  "manga": [
+    {
+      "id": "mangafire",
+      "name": "MangaFire",
+      "type": "manga",
+      "url": "https://mangafire.to",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Popular manga aggregator, custom layout (not madara/themesia). High-value target."
+    },
+    {
+      "id": "weebcentral",
+      "name": "Weeb Central",
+      "type": "manga",
+      "url": "https://weebcentral.com",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Successor to MangaSee-style readers; active."
+    },
+    {
+      "id": "manganato",
+      "name": "MangaNato",
+      "type": "manga",
+      "url": "https://www.manganato.gg",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Manganelo/Natomanga lineage; check if the existing madara engine fits via a base override before writing a new one."
+    }
+  ],
+  "comics": [
+    {
+      "id": "getcomics",
+      "name": "GetComics",
+      "type": "comics",
+      "url": "https://getcomics.org",
+      "engine": "needs:html-scrape-ddl",
+      "reachable": "unknown",
+      "notes": "Comics DDL (CBR/CBZ links). Different shape from readallcomics (reader) — this is a download index."
+    },
+    {
+      "id": "comicbookplus",
+      "name": "ComicBookPlus",
+      "type": "comics",
+      "url": "https://comicbookplus.com",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "PUBLIC-DOMAIN / golden-age comics only — legal, safe to prioritize."
+    }
+  ],
+  "lightnovel": [
+    {
+      "id": "royalroad",
+      "name": "Royal Road",
+      "type": "novels",
+      "url": "https://www.royalroad.com",
+      "api": "has public-ish API + RSS per-fiction",
+      "engine": "needs:adapter (fits novels.zig source_config pattern)",
+      "reachable": "unknown",
+      "notes": "Original/self-published web serials — LEGAL user-posted content. Best novels candidate; author-permitted."
+    },
+    {
+      "id": "novelfire",
+      "name": "NovelFire",
+      "type": "novels",
+      "url": "https://novelfire.net",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Active light-novel reader."
+    },
+    {
+      "id": "wuxiaclick",
+      "name": "WuxiaClick",
+      "type": "novels",
+      "url": "https://wuxia.click",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Translated web novels."
+    }
+  ],
+  "ebook_libraries": [
+    {
+      "id": "annas-archive",
+      "name": "Anna's Archive",
+      "type": "ebook",
+      "url": "https://annas-archive.org",
+      "api": "search + metadata; download often via external mirrors",
+      "engine": "needs:adapter",
+      "reachable": "unknown",
+      "notes": "Meta-search over LibGen/Z-Lib/etc. Domain churns (.gl/.se/.org). Broad ebook+comics+manga coverage."
+    },
+    {
+      "id": "libgen",
+      "name": "Library Genesis",
+      "type": "ebook",
+      "url": "https://libgen.li",
+      "api": "JSON/OPDS mirrors exist",
+      "engine": "needs:adapter (OPDS mirror may fit existing opds engine)",
+      "reachable": "unknown",
+      "notes": "Check LibGen OPDS mirror — Opal already has an OPDS engine, so this could be near-free to wire."
+    }
+  ]
+}

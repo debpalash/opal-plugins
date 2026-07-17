@@ -1,0 +1,130 @@
+{
+  "note": "Curated torrent-source candidates for Opal, NOT yet in the live manifest. A live manifest entry only works if the app ships a matching nova2-style engine; these need an engine written first (see `engine`). This file is the source-of-truth so that work can proceed. Reachability was probed from a datacenter IP — `blocked-from-ci` means the probe was refused (geo/UA/Cloudflare), NOT that the site is dead; verify from a normal client. Deduped against the live manifest's existing torrent plugins.",
+  "schema": 1,
+  "sources": [
+    {
+      "id": "ext",
+      "name": "ExT",
+      "type": "torrent",
+      "url": "https://ext.to",
+      "search": "https://ext.to/search/?q={query}",
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "blocked-from-ci",
+      "notes": "General indexer, HTML results. From FMHY + user list."
+    },
+    {
+      "id": "filemood",
+      "name": "Filemood",
+      "type": "torrent",
+      "url": "https://filemood.com",
+      "search": "https://filemood.com/result?q={query}",
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "confirmed",
+      "notes": "DHT/torrent meta-search. Confirmed live; result page title reflects the query. User-provided."
+    },
+    {
+      "id": "nnmclub",
+      "name": "NNM-Club",
+      "type": "torrent",
+      "url": "https://nnmclub.to",
+      "search": "https://nnmclub.to/forum/tracker.php?nm={query}",
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "confirmed",
+      "notes": "Russian tracker (forum-based). Confirmed 200. Downloads may require a free account. User-provided."
+    },
+    {
+      "id": "kinozal",
+      "name": "Kinozal",
+      "type": "torrent",
+      "url": "https://kinozal.tv",
+      "search": "https://kinozal.tv/browse.php?s={query}",
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "blocked-from-ci",
+      "notes": "Russian movie/TV tracker. From FMHY. Account likely needed for .torrent download."
+    },
+    {
+      "id": "rutracker",
+      "name": "RuTracker",
+      "type": "torrent",
+      "url": "https://rutracker.org",
+      "search": "https://rutracker.org/forum/tracker.php?nm={query}",
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "confirmed",
+      "notes": "Large Russian tracker. Confirmed 200. Login required for magnet/.torrent — treat as authenticated (like jackett/torznab), not anonymous. From FMHY."
+    },
+    {
+      "id": "torrentsurf",
+      "name": "TorrentSurf",
+      "type": "torrent",
+      "url": "https://torrentsurf.to",
+      "search": null,
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "blocked-from-ci",
+      "notes": "General indexer (403 from CI — Cloudflare). From FMHY."
+    },
+    {
+      "id": "publicdomaintorrents",
+      "name": "Public Domain Torrents",
+      "type": "torrent",
+      "url": "https://www.publicdomaintorrents.info",
+      "search": null,
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Legal public-domain films only — safest of the set, good candidate to prioritize. From FMHY."
+    },
+    {
+      "id": "nekobt",
+      "name": "nekoBT",
+      "type": "torrent",
+      "url": "https://nekobt.to",
+      "search": null,
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "error-500",
+      "notes": "Anime torrents. 500 from CI (reachable, server hiccup). From FMHY anime-torrenting."
+    },
+    {
+      "id": "shanaproject",
+      "name": "ShanaProject",
+      "type": "torrent",
+      "url": "https://www.shanaproject.com",
+      "search": "https://www.shanaproject.com/search/{query}/",
+      "api": "rss: https://www.shanaproject.com/feeds/latest/",
+      "engine": "needs:html-scrape-or-rss",
+      "reachable": "confirmed",
+      "notes": "Anime release tracker with RSS. Confirmed 200. RSS makes this engine-cheap. From FMHY anime-torrenting."
+    }
+  ],
+  "release_db": [
+    {
+      "id": "predb",
+      "name": "PreDB",
+      "type": "release-index",
+      "url": "https://predb.net",
+      "search": "https://predb.net/?q={query}",
+      "api": "unconfirmed (site exposes search; JSON endpoint not verified)",
+      "engine": "needs:metadata-adapter",
+      "reachable": "confirmed",
+      "notes": "Scene release / NFO database, NOT a torrent tracker. Useful for release-name → metadata, not for magnets. User-provided; categorize separately."
+    }
+  ],
+  "excluded": [
+    {
+      "id": "hdvinnie-private-trackers",
+      "url": "https://hdvinnie.github.io/Private-Trackers-Spreadsheet/",
+      "reason": "Private trackers require invites/accounts; they are not public API endpoints and cannot become functional public plugins. Reference only."
+    },
+    {
+      "id": "developify",
+      "url": "https://developify.ca/",
+      "reason": "Purpose unclear (403 from CI, not obviously a torrent source). Needs identification before cataloging."
+    }
+  ]
+}
