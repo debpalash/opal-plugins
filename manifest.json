@@ -431,6 +431,17 @@
         "base": "https://raw.githubusercontent.com/debpalash/opal-plugins/main/lists"
       },
       "file": "plugins/lists.json"
+    },
+    {
+      "id": "allanime",
+      "name": "AllAnime",
+      "type": "anime",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://api.allanime.day",
+        "referer": "https://allmanga.to"
+      },
+      "file": "plugins/allanime.json"
     }
   ]
 }
