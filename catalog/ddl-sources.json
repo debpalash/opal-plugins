@@ -67,10 +67,66 @@
       "engine": "needs:html-scrape",
       "reachable": "unknown",
       "notes": "Anime DDL index."
+    },
+    {
+      "id": "noobsubs",
+      "name": "NoobSubs",
+      "type": "anime-ddl",
+      "url": "https://www.noobsubs.com",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Dual-audio (Eng) anime encodes + torrent options. r/Piracy anime."
+    },
+    {
+      "id": "chauthanh",
+      "name": "ChauThanh",
+      "type": "anime-ddl",
+      "url": "https://chauthanh.info",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "5000+ anime/drama/soundtracks, organized DDL. r/Piracy anime."
     }
   ],
   "excluded_regional_blogs": {
     "reason": "~140 regional movie/TV DDL blogs (vegamovies, pahe, moviesflix, hdhub, worldfree4u, katmoviehd, etc.) with monthly domain churn and per-site scraping. Not durable; a debrid/Stremio-addon path serves the same need far more stably.",
     "count_seen": 140
+  },
+  "warez_scene": [
+    {
+      "id": "meawfy",
+      "name": "Meawfy",
+      "type": "ddl-index",
+      "url": "https://meawfy.com",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Search index over Mega.nz files (9M+ items). Link-resolution downstream. r/Piracy all-purpose."
+    },
+    {
+      "id": "scnlog",
+      "name": "Scnlog",
+      "type": "ddl-scene",
+      "url": "https://scnlog.me",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Scene release DB, music-leaning. r/Piracy all-purpose."
+    },
+    {
+      "id": "softarchive",
+      "name": "SoftArchive",
+      "type": "ddl-scene",
+      "url": "https://softarchive.is",
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Scene DDL (software/games/music/movies/ebooks). r/Piracy all-purpose."
+    }
+  ],
+  "excluded_forums": {
+    "reason": "Sign-up/invite forums (DirtyWarez, WarezBook, WarezForums) and the TorrentLeech private tracker — not public API endpoints.",
+    "ids": [
+      "dirtywarez",
+      "warezbook",
+      "warezforums",
+      "torrentleech"
+    ]
   }
 }
