@@ -177,6 +177,94 @@
       "engine": "needs:html-scrape",
       "reachable": "confirmed",
       "notes": "Static dump of the old RARBG catalog. Confirmed 200. fmhy. No new releases (historical)."
+    },
+    {
+      "id": "subsplease",
+      "name": "SubsPlease",
+      "type": "torrent",
+      "url": "https://subsplease.org",
+      "search": "https://subsplease.org/shows/{query}/",
+      "api": "https://subsplease.org/api/ (JSON schedule/releases) + RSS",
+      "engine": "needs:json-or-rss",
+      "reachable": "confirmed-community",
+      "notes": "Major current-season subgroup. Public JSON API + RSS → engine-cheap and high-value. r/Piracy anime GOAT."
+    },
+    {
+      "id": "erai-raws",
+      "name": "Erai-raws",
+      "type": "torrent",
+      "url": "https://www.erai-raws.info",
+      "search": null,
+      "api": "RSS feeds per resolution",
+      "engine": "needs:rss",
+      "reachable": "community",
+      "notes": "Major multi-sub subgroup. RSS available. Sign-up may be needed. r/Piracy anime."
+    },
+    {
+      "id": "beatrice-raws",
+      "name": "Beatrice-Raws",
+      "type": "torrent",
+      "url": "https://beatrice-raws.org",
+      "search": null,
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "community",
+      "notes": "High-quality raw (BD) anime torrents. r/Piracy anime."
+    },
+    {
+      "id": "drevosindex",
+      "name": "Drevos Index",
+      "type": "torrent",
+      "url": "https://drevosindex.com",
+      "search": null,
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "community",
+      "notes": "Personal near-lossless BD encodes. r/Piracy anime."
+    },
+    {
+      "id": "acgnx",
+      "name": "Project AcgnX",
+      "type": "torrent",
+      "url": "https://share.acgnx.se",
+      "search": null,
+      "api": "RSS",
+      "engine": "needs:html-scrape-or-rss",
+      "reachable": "community",
+      "notes": "Chinese anime torrent aggregator (Anime Garden/Jiying/Youxia). r/Piracy anime."
+    },
+    {
+      "id": "developify",
+      "name": "The Torrent Database (developify)",
+      "type": "torrent",
+      "url": "https://developify.ca",
+      "search": "https://developify.ca/?q={query}",
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "403-cf",
+      "notes": "RESOLVED: r/Piracy all-purpose lists this as 'The Torrent Database' — a sizable well-seeded torrent DB. (Earlier 'purpose unclear' — now identified.)"
+    },
+    {
+      "id": "rustorka",
+      "name": "Rustorka",
+      "type": "torrent",
+      "url": "https://rustorka.com",
+      "search": null,
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Russian warez forum/tracker (magnets). Russian UI. r/Piracy all-purpose."
+    },
+    {
+      "id": "torrentdownload",
+      "name": "TorrentDownload",
+      "type": "torrent",
+      "url": "https://www.torrentdownload.info",
+      "search": null,
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "unknown",
+      "notes": "Distinct from torrentdownloads.pro (already a plugin). Latest TV/movies/music/games. r/Piracy all-purpose."
     }
   ],
   "release_db": [
@@ -184,12 +272,23 @@
       "id": "predb",
       "name": "PreDB",
       "type": "release-index",
-      "url": "https://predb.net",
+      "url": "https://predb.net (alt: https://predb.me)",
       "search": "https://predb.net/?q={query}",
       "api": "unconfirmed (site exposes search; JSON endpoint not verified)",
       "engine": "needs:metadata-adapter",
       "reachable": "confirmed",
       "notes": "Scene release / NFO database, NOT a torrent tracker. Useful for release-name → metadata, not for magnets. User-provided; categorize separately."
+    },
+    {
+      "id": "xrel",
+      "name": "xREL",
+      "type": "release-index",
+      "url": "https://www.xrel.to",
+      "search": null,
+      "api": "has a documented API (xrel.to/wiki/1681/API.html)",
+      "engine": "needs:metadata-adapter",
+      "reachable": "unknown",
+      "notes": "German scene release board with a documented API. Release metadata, not magnets. r/Piracy all-purpose."
     }
   ],
   "excluded": [
@@ -199,14 +298,9 @@
       "reason": "Private trackers require invites/accounts; they are not public API endpoints and cannot become functional public plugins. Reference only."
     },
     {
-      "id": "developify",
-      "url": "https://developify.ca/",
-      "reason": "Purpose unclear (403 from CI, not obviously a torrent source). Needs identification before cataloging."
-    },
-    {
       "id": "animetosho",
       "url": "https://animetosho.org/",
-      "reason": "Ceased operations 2026-05-09 (site frozen, shutting down). everythingmoe ranked it #2 but it is defunct — verified live, not added."
+      "reason": "CONFLICTING SIGNALS: the site showed a 'ceased operations 2026-05-09' notice when probed, but r/Piracy's anime megathread (moderator-approved, revised ~Jul 2026) still lists it as an active DDL mirror for Nyaa/TokyoTosho. Verify current status before wiring; do not add blind."
     }
   ]
 }
