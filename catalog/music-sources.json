@@ -80,6 +80,15 @@
       "engine": "needs:adapter",
       "reachable": "unknown",
       "notes": "Qobuz/Tidal ripper. Piracy-class."
+    },
+    {
+      "id": "deemix",
+      "name": "deemix",
+      "type": "music-download",
+      "url": "https://deemix.app",
+      "engine": "needs:adapter",
+      "reachable": "unknown",
+      "notes": "Deezer downloader (self-host/library). Paid-service extraction — piracy-class, gate like the others. awesome-piracy."
     }
   ],
   "note_soulseek": "The classic p2p music source (Soulseek/slskd) is a protocol, not a URL endpoint — it would need a client integration, not a plugin entry."

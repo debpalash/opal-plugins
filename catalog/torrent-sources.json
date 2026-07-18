@@ -100,6 +100,83 @@
       "engine": "needs:html-scrape-or-rss",
       "reachable": "confirmed",
       "notes": "Anime release tracker with RSS. Confirmed 200. RSS makes this engine-cheap. From FMHY anime-torrenting."
+    },
+    {
+      "id": "idope",
+      "name": "iDope",
+      "type": "torrent",
+      "url": "https://idope.se",
+      "search": "https://idope.se/torrent-list/{query}/",
+      "api": null,
+      "engine": "needs:dht-scrape",
+      "reachable": "blocked-from-ci",
+      "notes": "DHT search engine. Durable meta-index. awesome-piracy + fmhy."
+    },
+    {
+      "id": "btdigg",
+      "name": "BTDigg",
+      "type": "torrent",
+      "url": "https://btdig.com",
+      "search": "https://btdig.com/search?q={query}",
+      "api": null,
+      "engine": "needs:dht-json",
+      "reachable": "blocked-from-ci",
+      "notes": "DHT search with a JSON-ish API. Long-running. awesome-piracy."
+    },
+    {
+      "id": "bt4g",
+      "name": "BT4G",
+      "type": "torrent",
+      "url": "https://bt4gprx.com",
+      "search": "https://bt4gprx.com/search?q={query}",
+      "api": null,
+      "engine": "needs:dht-scrape",
+      "reachable": "403-cf",
+      "notes": "Popular DHT aggregator; RSS available. fmhy. 403 from CI (Cloudflare)."
+    },
+    {
+      "id": "torrentquest",
+      "name": "TorrentQuest",
+      "type": "torrent",
+      "url": "https://torrentquest.com",
+      "search": "https://torrentquest.com/q/{query}",
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "confirmed",
+      "notes": "Aggregator. Confirmed 200. fmhy."
+    },
+    {
+      "id": "torr9",
+      "name": "Torr9",
+      "type": "torrent",
+      "url": "https://torr9.net",
+      "search": null,
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "confirmed",
+      "notes": "Video/Audio/Books aggregator. Confirmed 200. fmhy."
+    },
+    {
+      "id": "uztracker",
+      "name": "UZTracker",
+      "type": "torrent",
+      "url": "https://uztracker.net",
+      "search": null,
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "blocked-from-ci",
+      "notes": "Aggregator. fmhy."
+    },
+    {
+      "id": "rarbgdump",
+      "name": "RARBG Dump",
+      "type": "torrent",
+      "url": "https://rarbgdump.com",
+      "search": null,
+      "api": null,
+      "engine": "needs:html-scrape",
+      "reachable": "confirmed",
+      "notes": "Static dump of the old RARBG catalog. Confirmed 200. fmhy. No new releases (historical)."
     }
   ],
   "release_db": [
@@ -125,6 +202,11 @@
       "id": "developify",
       "url": "https://developify.ca/",
       "reason": "Purpose unclear (403 from CI, not obviously a torrent source). Needs identification before cataloging."
+    },
+    {
+      "id": "animetosho",
+      "url": "https://animetosho.org/",
+      "reason": "Ceased operations 2026-05-09 (site frozen, shutting down). everythingmoe ranked it #2 but it is defunct — verified live, not added."
     }
   ]
 }

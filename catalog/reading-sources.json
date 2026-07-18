@@ -28,6 +28,15 @@
       "engine": "needs:html-scrape",
       "reachable": "unknown",
       "notes": "Manganelo/Natomanga lineage; check if the existing madara engine fits via a base override before writing a new one."
+    },
+    {
+      "id": "mangago",
+      "name": "Mangago",
+      "type": "manga",
+      "url": "https://www.mangago.me",
+      "engine": "needs:html-scrape",
+      "reachable": "403-cf",
+      "notes": "Large long-running manga reader. 403 from CI (Cloudflare). everythingmoe + awesome-piracy."
     }
   ],
   "comics": [
