@@ -190,28 +190,6 @@
       "file": "plugins/comet.json"
     },
     {
-      "id": "knightcrawler",
-      "name": "KnightCrawler (Stremio)",
-      "type": "stremio",
-      "version": "1.0.0",
-      "endpoints": {
-        "stremio": "https://knightcrawler.elfhosted.com/manifest.json",
-        "types": "movie,series"
-      },
-      "file": "plugins/knightcrawler.json"
-    },
-    {
-      "id": "cyberflix",
-      "name": "CyberFlix (Stremio)",
-      "type": "stremio",
-      "version": "1.0.0",
-      "endpoints": {
-        "stremio": "https://cyberflix.elfhosted.com/manifest.json",
-        "types": "movie,series"
-      },
-      "file": "plugins/cyberflix.json"
-    },
-    {
       "id": "thepiratebay-plus",
       "name": "ThePirateBay+ (Stremio)",
       "type": "stremio",
@@ -418,7 +396,7 @@
       "type": "torrent",
       "version": "1.0.0",
       "endpoints": {
-        "base": "https://www.torrentfunk2.com"
+        "base": "https://www.torrentfunk.com"
       },
       "file": "plugins/torrentfunk.json"
     },
