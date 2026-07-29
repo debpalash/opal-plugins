@@ -386,7 +386,7 @@
       "type": "torrent",
       "version": "1.0.0",
       "endpoints": {
-        "base": "http://tokyotosho.info"
+        "base": "https://www.tokyotosho.info/"
       },
       "file": "plugins/tokyotoshokan.json"
     },
