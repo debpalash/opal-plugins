@@ -8,7 +8,7 @@
       "type": "manga",
       "url": "https://mangafire.to",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "Popular manga aggregator, custom layout (not madara/themesia). High-value target."
     },
     {
@@ -17,7 +17,7 @@
       "type": "manga",
       "url": "https://weebcentral.com",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "Successor to MangaSee-style readers; active."
     },
     {
@@ -26,7 +26,7 @@
       "type": "manga",
       "url": "https://www.manganato.gg",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "Manganelo/Natomanga lineage; check if the existing madara engine fits via a base override before writing a new one."
     },
     {
@@ -35,7 +35,7 @@
       "type": "manga",
       "url": "https://www.mangago.me",
       "engine": "needs:html-scrape",
-      "reachable": "403-cf",
+      "reachable": "blocked-from-ci",
       "notes": "Large long-running manga reader. 403 from CI (Cloudflare). everythingmoe + awesome-piracy."
     }
   ],
@@ -46,7 +46,7 @@
       "type": "comics",
       "url": "https://getcomics.org",
       "engine": "needs:html-scrape-ddl",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "Comics DDL (CBR/CBZ links). Different shape from readallcomics (reader) — this is a download index."
     },
     {
@@ -55,7 +55,7 @@
       "type": "comics",
       "url": "https://comicbookplus.com",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "PUBLIC-DOMAIN / golden-age comics only — legal, safe to prioritize."
     }
   ],
@@ -67,7 +67,7 @@
       "url": "https://www.royalroad.com",
       "api": "has public-ish API + RSS per-fiction",
       "engine": "needs:adapter (fits novels.zig source_config pattern)",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "Original/self-published web serials — LEGAL user-posted content. Best novels candidate; author-permitted."
     },
     {
@@ -76,7 +76,7 @@
       "type": "novels",
       "url": "https://novelfire.net",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "Active light-novel reader."
     },
     {
@@ -85,7 +85,7 @@
       "type": "novels",
       "url": "https://wuxia.click",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "Translated web novels."
     }
   ],
@@ -107,8 +107,9 @@
       "url": "https://libgen.li",
       "api": "JSON/OPDS mirrors exist",
       "engine": "needs:adapter (OPDS mirror may fit existing opds engine)",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "Check LibGen OPDS mirror — Opal already has an OPDS engine, so this could be near-free to wire."
     }
-  ]
+  ],
+  "last_scan": "2026-07-29"
 }

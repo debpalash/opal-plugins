@@ -8,7 +8,7 @@
       "type": "ddl",
       "url": "https://hdencode.org",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "Release-scene DDL index (encodes, links to filehosts). More structured/durable than the regional blogs."
     },
     {
@@ -17,7 +17,7 @@
       "type": "ddl",
       "url": "https://rmz.cr",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "Long-running release DDL index."
     },
     {
@@ -26,7 +26,7 @@
       "type": "ddl",
       "url": "https://psa.wf",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "PSA release group DDL. Filehost links (needs a debrid/host resolver downstream)."
     }
   ],
@@ -38,7 +38,7 @@
       "url": "https://nibl.co.uk",
       "api": "https://api.nibl.co.uk (documented JSON — XDCC bot pack index)",
       "engine": "needs:json-adapter (+ XDCC/IRC fetch, non-trivial transport)",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "XDCC pack search API. Clean JSON, but delivery is over IRC XDCC — a transport Opal doesn't have. Catalog now, transport later."
     },
     {
@@ -47,7 +47,7 @@
       "type": "anime-ddl",
       "url": "https://kayoanime.com",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "Google-Drive-backed anime DDL. Link-resolution is the hard part."
     },
     {
@@ -56,7 +56,7 @@
       "type": "anime-ddl",
       "url": "https://hi10anime.com",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "10-bit anime encodes, DDL. Free account may be needed."
     },
     {
@@ -65,7 +65,7 @@
       "type": "anime-ddl",
       "url": "https://new.anidl.org",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "Anime DDL index."
     },
     {
@@ -74,7 +74,7 @@
       "type": "anime-ddl",
       "url": "https://www.noobsubs.com",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "error-500",
       "notes": "Dual-audio (Eng) anime encodes + torrent options. r/Piracy anime."
     },
     {
@@ -83,7 +83,7 @@
       "type": "anime-ddl",
       "url": "https://chauthanh.info",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "5000+ anime/drama/soundtracks, organized DDL. r/Piracy anime."
     }
   ],
@@ -98,7 +98,7 @@
       "type": "ddl-index",
       "url": "https://meawfy.com",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "Search index over Mega.nz files (9M+ items). Link-resolution downstream. r/Piracy all-purpose."
     },
     {
@@ -107,7 +107,7 @@
       "type": "ddl-scene",
       "url": "https://scnlog.me",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "Scene release DB, music-leaning. r/Piracy all-purpose."
     },
     {
@@ -116,7 +116,7 @@
       "type": "ddl-scene",
       "url": "https://softarchive.is",
       "engine": "needs:html-scrape",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "Scene DDL (software/games/music/movies/ebooks). r/Piracy all-purpose."
     }
   ],
@@ -128,5 +128,6 @@
       "warezforums",
       "torrentleech"
     ]
-  }
+  },
+  "last_scan": "2026-07-29"
 }

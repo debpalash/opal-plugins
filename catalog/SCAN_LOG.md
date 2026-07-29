@@ -37,3 +37,75 @@ as pasted wiki JSON and scanned from that:
 - The 3 reddit megathreads (need a non-blocked route — e.g. a mirror or manual paste).
 - mediasavvy.wiki deep pages.
 - FMHY `downloading.md` (DDL) not yet mined beyond `video.md`'s section.
+
+## Automated reachability scans
+
+Written by `.github/workflows/catalog-reachability.yml`. A probe runs from a datacenter IP, so `blocked-from-ci` and `unknown` mean *we could not see the site*, not that it is gone. Everything above this line is hand-written and is never modified by the workflow.
+
+<!-- BEGIN AUTOMATED-SCANS (managed by .github/workflows/catalog-reachability.yml) -->
+
+### 2026-07-29 14:21 UTC
+
+Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 27, `confirmed`: 33, `error-500`: 1, `unknown`: 4.
+
+| id | file | was | now |
+|---|---|---|---|
+| `animeparadise` | `api_backed` in `anime-sources.json` | `unknown` | `confirmed` |
+| `animeonsen` | `api_backed` in `anime-sources.json` | `unknown` | `blocked-from-ci` |
+| `miruro` | `api_backed` in `anime-sources.json` | `unknown` | `blocked-from-ci` |
+| `seadex` | `metadata_and_quality` in `anime-sources.json` | `unknown` | `confirmed` |
+| `tracemoe` | `metadata_and_quality` in `anime-sources.json` | `unknown` | `confirmed` |
+| `kitsu` | `metadata_and_quality` in `anime-sources.json` | `unknown` | `confirmed` |
+| `kurozora` | `metadata_and_quality` in `anime-sources.json` | `unknown` | `blocked-from-ci` |
+| `hdencode` | `release_group_ddl` in `ddl-sources.json` | `unknown` | `confirmed` |
+| `rapidmoviez` | `release_group_ddl` in `ddl-sources.json` | `unknown` | `blocked-from-ci` |
+| `psarips` | `release_group_ddl` in `ddl-sources.json` | `unknown` | `blocked-from-ci` |
+| `nibl` | `anime_ddl` in `ddl-sources.json` | `unknown` | `confirmed` |
+| `kayoanime` | `anime_ddl` in `ddl-sources.json` | `unknown` | `confirmed` |
+| `hi10anime` | `anime_ddl` in `ddl-sources.json` | `unknown` | `confirmed` |
+| `anidl` | `anime_ddl` in `ddl-sources.json` | `unknown` | `blocked-from-ci` |
+| `noobsubs` | `anime_ddl` in `ddl-sources.json` | `unknown` | `error-500` |
+| `chauthanh` | `anime_ddl` in `ddl-sources.json` | `unknown` | `confirmed` |
+| `meawfy` | `warez_scene` in `ddl-sources.json` | `unknown` | `blocked-from-ci` |
+| `scnlog` | `warez_scene` in `ddl-sources.json` | `unknown` | `blocked-from-ci` |
+| `softarchive` | `warez_scene` in `ddl-sources.json` | `unknown` | `blocked-from-ci` |
+| `lrclib` | `legal_api` in `music-sources.json` | `unknown` | `confirmed` |
+| `cobalt` | `legal_api` in `music-sources.json` | `unknown` | `confirmed` |
+| `bandcamp` | `legal_api` in `music-sources.json` | `unknown` | `blocked-from-ci` |
+| `audius` | `legal_api` in `music-sources.json` | `unknown` | `confirmed` |
+| `khinsider` | `legal_api` in `music-sources.json` | `unknown` | `blocked-from-ci` |
+| `lucida` | `stream_rippers` in `music-sources.json` | `unknown` | `blocked-from-ci` |
+| `doubledouble` | `stream_rippers` in `music-sources.json` | `unknown` | `confirmed` |
+| `squidwtf` | `stream_rippers` in `music-sources.json` | `unknown` | `confirmed` |
+| `deemix` | `stream_rippers` in `music-sources.json` | `unknown` | `confirmed` |
+| `mangafire` | `manga` in `reading-sources.json` | `unknown` | `blocked-from-ci` |
+| `weebcentral` | `manga` in `reading-sources.json` | `unknown` | `blocked-from-ci` |
+| `manganato` | `manga` in `reading-sources.json` | `unknown` | `confirmed` |
+| `mangago` | `manga` in `reading-sources.json` | `403-cf` | `blocked-from-ci` |
+| `getcomics` | `comics` in `reading-sources.json` | `unknown` | `blocked-from-ci` |
+| `comicbookplus` | `comics` in `reading-sources.json` | `unknown` | `confirmed` |
+| `royalroad` | `lightnovel` in `reading-sources.json` | `unknown` | `confirmed` |
+| `novelfire` | `lightnovel` in `reading-sources.json` | `unknown` | `blocked-from-ci` |
+| `wuxiaclick` | `lightnovel` in `reading-sources.json` | `unknown` | `confirmed` |
+| `libgen` | `ebook_libraries` in `reading-sources.json` | `unknown` | `confirmed` |
+| `kinozal` | `sources` in `torrent-sources.json` | `blocked-from-ci` | `unknown` |
+| `publicdomaintorrents` | `sources` in `torrent-sources.json` | `unknown` | `confirmed` |
+| `nekobt` | `sources` in `torrent-sources.json` | `error-500` | `confirmed` |
+| `idope` | `sources` in `torrent-sources.json` | `blocked-from-ci` | `unknown` |
+| `bt4g` | `sources` in `torrent-sources.json` | `403-cf` | `confirmed` |
+| `torrentquest` | `sources` in `torrent-sources.json` | `confirmed` | `blocked-from-ci` |
+| `uztracker` | `sources` in `torrent-sources.json` | `blocked-from-ci` | `unknown` |
+| `rarbgdump` | `sources` in `torrent-sources.json` | `confirmed` | `blocked-from-ci` |
+| `developify` | `sources` in `torrent-sources.json` | `403-cf` | `blocked-from-ci` |
+| `rustorka` | `sources` in `torrent-sources.json` | `unknown` | `blocked-from-ci` |
+| `torrentdownload` | `sources` in `torrent-sources.json` | `unknown` | `blocked-from-ci` |
+| `xrel` | `release_db` in `torrent-sources.json` | `unknown` | `confirmed` |
+
+Notes:
+
+- `royalroad` (reading-sources.json): https://www.royalroad.com redirects to https://www.royalroad.com/home (catalog url left as-is; confirm before editing)
+- `rutracker` (torrent-sources.json): https://rutracker.org redirects to https://rutracker.org/forum/index.php (catalog url left as-is; confirm before editing)
+- `erai-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+- `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+
+<!-- END AUTOMATED-SCANS -->

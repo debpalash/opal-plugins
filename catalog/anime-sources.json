@@ -9,7 +9,7 @@
       "url": "https://www.animeparadise.moe",
       "api": "https://api.animeparadise.moe (JSON)",
       "engine": "needs:json-adapter",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "Open JSON API backend — cleanest integration candidate of the anime set."
     },
     {
@@ -19,7 +19,7 @@
       "url": "https://animeonsen.xyz",
       "api": "https://api.animeonsen.xyz/v4 (documented, OAuth client-credentials)",
       "engine": "needs:json-adapter",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "Documented v4 API; requires a client id/secret (like a keyed plugin). Dubbed-heavy catalog."
     },
     {
@@ -29,7 +29,7 @@
       "url": "https://www.miruro.com",
       "api": "consumet/anilist-style backend",
       "engine": "needs:json-adapter",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "Rides a Consumet/AniList backend; if it exposes a stable proxy, one adapter could cover several front-ends."
     }
   ],
@@ -53,7 +53,7 @@
       "url": "https://releases.moe",
       "api": "https://releases.moe/api/ (public JSON — best-release recommendations per AniList id)",
       "engine": "needs:json-adapter (trivial)",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "LEGAL metadata: tells you the BEST torrent release for a title, keyed by AniList id. Pairs perfectly with Opal's AniList data — 'recommended release' hint. Top pick of the anime tools."
     },
     {
@@ -63,7 +63,7 @@
       "url": "https://trace.moe",
       "api": "https://api.trace.moe/search (reverse-image → anime+episode+timestamp)",
       "engine": "needs:json-adapter",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "LEGAL API: identify an anime from a screenshot. Niche but a nice 'what is this frame' feature."
     },
     {
@@ -73,7 +73,7 @@
       "url": "https://kitsu.io",
       "api": "https://kitsu.io/api/edge (JSON:API, keyless)",
       "engine": "needs:json-adapter",
-      "reachable": "unknown",
+      "reachable": "confirmed",
       "notes": "LEGAL metadata/tracking API — an alternative/supplement to Jikan+AniList. Opal has the anime-kitsu Stremio addon but not the Kitsu metadata API itself."
     },
     {
@@ -83,8 +83,9 @@
       "url": "https://kurozora.app",
       "api": "https://kurozora.app/api (documented)",
       "engine": "needs:json-adapter",
-      "reachable": "unknown",
+      "reachable": "blocked-from-ci",
       "notes": "All-in-one anime/manga/music/games tracker with an API. Legal metadata."
     }
-  ]
+  ],
+  "last_scan": "2026-07-29"
 }
