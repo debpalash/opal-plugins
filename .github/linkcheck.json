@@ -1,0 +1,41 @@
+{
+  "note": "Per-endpoint overrides for .github/workflows/endpoint-liveness.yml. Some endpoints are not meaningfully probeable at their literal value -- a directory prefix has no index, an API rejects a bare GET. Without these the checker reports confident false positives, which trains people to ignore it. Keys are '<plugin-id>.<endpoint-key>'.",
+  "overrides": {
+    "lists.base": {
+      "probe": "https://raw.githubusercontent.com/debpalash/opal-plugins/main/lists/anime.json",
+      "why": "base is a directory prefix; raw.githubusercontent.com serves no index for it and always 404s. Probe a file the app actually fetches instead."
+    },
+    "iptv-org.base": {
+      "probe": "https://iptv-org.github.io/api/channels.json",
+      "why": "base is a directory prefix with no index page; the app appends /<resource>.json."
+    },
+    "eztv.api": {
+      "probe": "https://eztvx.to/api/get-torrents?limit=1",
+      "why": "the API requires query parameters; a bare GET hangs until timeout."
+    },
+    "allanime.base": {
+      "expect": ["ok", "blocked"],
+      "why": "GraphQL API that only answers POST with the right Referer; a bare GET is 403 by design. 'blocked' here is normal, not a regression."
+    },
+    "apibay.base": {
+      "expect": ["ok", "blocked"],
+      "why": "Cloudflare-fronted; datacenter IPs get challenged. Verify from a residential client before believing it is down."
+    },
+    "one337x.base": {
+      "expect": ["ok", "blocked"],
+      "why": "Cloudflare-fronted; datacenter IPs get challenged."
+    },
+    "nyaa.base": {
+      "expect": ["ok", "blocked"],
+      "why": "serves a WAF interstitial to datacenter IPs while remaining up for normal clients."
+    },
+    "kickass.base": {
+      "expect": ["ok", "blocked"],
+      "why": "Cloudflare-fronted; datacenter IPs get challenged."
+    },
+    "animepahe.base": {
+      "expect": ["ok", "blocked"],
+      "why": "DDoS-Guard fronted; datacenter IPs get challenged."
+    }
+  }
+}

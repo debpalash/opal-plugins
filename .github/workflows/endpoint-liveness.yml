@@ -1,0 +1,110 @@
+name: Endpoint liveness
+
+# Probes every endpoint in manifest.json and plugins/*.json and keeps a single
+# tracking issue up to date.
+#
+# What this workflow deliberately does NOT do: guess a replacement domain.
+# These files are installed into users' ~/.config/opal/plugins/sources/, and a
+# parked or hijacked domain answering 200 is indistinguishable from a healthy
+# rebrand to an automated checker. Only rewrites that cannot change who is on
+# the other end (http -> https, www. normalisation, same host) are committed.
+# Everything else lands in the issue for a human. See
+# .github/scripts/check_endpoints.py.
+
+on:
+  schedule:
+    - cron: '13 3 * * 2'    # Tuesdays 03:13 UTC
+  workflow_dispatch:
+    inputs:
+      apply_mechanical:
+        description: Commit same-host mechanical rewrites (http->https, www.)
+        type: boolean
+        default: true
+      open_issue:
+        description: Create or update the tracking issue
+        type: boolean
+        default: true
+
+permissions:
+  contents: write   # only ever writes same-host mechanical rewrites
+  issues: write     # the tracking issue
+
+concurrency:
+  group: endpoint-liveness
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.2.2
+
+      - name: Probe endpoints
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          APPLY: ${{ github.event_name == 'schedule' && 'true' || inputs.apply_mechanical }}
+          ISSUE: ${{ github.event_name == 'schedule' && 'true' || inputs.open_issue }}
+        run: |
+          set -euo pipefail
+          args=""
+          if [ "$APPLY" = "true" ]; then
+            args="$args --apply"
+          fi
+          if [ "$ISSUE" = "true" ]; then
+            args="$args --issue"
+          fi
+          # shellcheck disable=SC2086
+          python3 .github/scripts/check_endpoints.py \
+            --concurrency 6 \
+            --json /tmp/endpoint-report.json \
+            $args
+
+      - name: Commit mechanical rewrites
+        if: steps.check.outputs.applied == 'true'
+        env:
+          COUNT: ${{ steps.check.outputs.applied_count }}
+          DESC: ${{ steps.check.outputs.applied_desc }}
+        run: |
+          set -euo pipefail
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          git add -- manifest.json plugins/
+
+          if git diff --cached --quiet; then
+            echo "Nothing staged; not committing."
+            exit 0
+          fi
+
+          {
+            printf 'chore(endpoints): apply %s mechanical endpoint rewrite(s)\n\n' "$COUNT"
+            printf 'These are same-host rewrites only -- an http -> https upgrade\n'
+            printf 'or a www. normalisation confirmed by a permanent 301/308 whose\n'
+            printf 'destination was re-probed independently and returned 2xx.\n\n'
+            printf 'No registrable domain was changed. A move to a different domain\n'
+            printf '(including "same brand, new TLD") is never applied automatically:\n'
+            printf 'it can indicate a rebrand, a mirror, an expired domain someone\n'
+            printf 'else re-registered, or a takeover, and these endpoints are\n'
+            printf 'installed into user configs. Those are reported in the endpoint\n'
+            printf 'health issue for a human to confirm instead.\n\n'
+            printf 'Applied:\n'
+            printf '%s\n' "$DESC" | tr ';' '\n' | sed 's/^ */  - /'
+            printf '\nAutomated by .github/workflows/endpoint-liveness.yml\n'
+          } > /tmp/endpoint-commit-msg
+
+          git commit -F /tmp/endpoint-commit-msg
+          git push
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
+        with:
+          name: endpoint-report
+          path: /tmp/endpoint-report.json
+          if-no-files-found: ignore
+          retention-days: 30
