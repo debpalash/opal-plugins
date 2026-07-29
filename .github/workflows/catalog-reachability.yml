@@ -81,7 +81,16 @@ jobs:
           } > /tmp/catalog-commit-msg
 
           git commit -F /tmp/catalog-commit-msg
-          git push
+          # These three workflows can overlap (a manual dispatch of all of
+          # them raced on the very first run and this push was rejected).
+          # Rebase-and-retry rather than fail a job that did its work.
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "push rejected, rebasing (attempt $attempt)"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || exit 1
+          done
+          echo "::error::could not push after 3 rebases"
+          exit 1
 
       - name: Report
         if: always()

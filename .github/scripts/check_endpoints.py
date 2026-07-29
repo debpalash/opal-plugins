@@ -438,7 +438,13 @@ def main() -> int:
                        "rows": [{k: v for k, v in r.items() if k != "result"}
                                 | {"result": r["result"].as_dict()}
                                 for r in data["rows"]],
-                       "drift": data["drift"]}, fh, indent=2)
+                       "drift": data["drift"]}, fh, indent=2,
+                      # `expect` comes out of linkcheck.json as a set, which
+                      # json cannot encode — the first live run died here after
+                      # doing all the probing work. Sort so the artifact is
+                      # stable across runs rather than set-iteration order.
+                      default=lambda o: sorted(o) if isinstance(o, (set, frozenset))
+                      else str(o))
 
     step_out = os.environ.get("GITHUB_OUTPUT")
     if step_out:
