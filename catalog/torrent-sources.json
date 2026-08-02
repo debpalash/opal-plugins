@@ -241,7 +241,7 @@
       "search": "https://developify.ca/?q={query}",
       "api": null,
       "engine": "needs:html-scrape",
-      "reachable": "blocked-from-ci",
+      "reachable": "confirmed",
       "notes": "RESOLVED: r/Piracy all-purpose lists this as 'The Torrent Database' — a sizable well-seeded torrent DB. (Earlier 'purpose unclear' — now identified.)"
     },
     {
@@ -303,5 +303,5 @@
       "reason": "CONFLICTING SIGNALS: the site showed a 'ceased operations 2026-05-09' notice when probed, but r/Piracy's anime megathread (moderator-approved, revised ~Jul 2026) still lists it as an active DDL mirror for Nyaa/TokyoTosho. Verify current status before wiring; do not add blind."
     }
   ],
-  "last_scan": "2026-07-29"
+  "last_scan": "2026-08-02"
 }

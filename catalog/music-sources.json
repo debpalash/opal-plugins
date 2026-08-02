@@ -60,7 +60,7 @@
       "type": "music-download",
       "url": "https://lucida.to",
       "engine": "needs:adapter",
-      "reachable": "blocked-from-ci",
+      "reachable": "confirmed",
       "notes": "Rips lossless from Qobuz/Tidal/Deezer/Amazon. Piracy-class (paid-service extraction) — gate like a torrent source if wired."
     },
     {
@@ -92,5 +92,5 @@
     }
   ],
   "note_soulseek": "The classic p2p music source (Soulseek/slskd) is a protocol, not a URL endpoint — it would need a client integration, not a plugin entry.",
-  "last_scan": "2026-07-29"
+  "last_scan": "2026-08-02"
 }

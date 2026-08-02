@@ -46,7 +46,7 @@
       "type": "comics",
       "url": "https://getcomics.org",
       "engine": "needs:html-scrape-ddl",
-      "reachable": "blocked-from-ci",
+      "reachable": "confirmed",
       "notes": "Comics DDL (CBR/CBZ links). Different shape from readallcomics (reader) — this is a download index."
     },
     {
@@ -111,5 +111,5 @@
       "notes": "Check LibGen OPDS mirror — Opal already has an OPDS engine, so this could be near-free to wire."
     }
   ],
-  "last_scan": "2026-07-29"
+  "last_scan": "2026-08-02"
 }
