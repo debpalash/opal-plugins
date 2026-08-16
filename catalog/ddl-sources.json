@@ -56,7 +56,7 @@
       "type": "anime-ddl",
       "url": "https://hi10anime.com",
       "engine": "needs:html-scrape",
-      "reachable": "confirmed",
+      "reachable": "unknown",
       "notes": "10-bit anime encodes, DDL. Free account may be needed."
     },
     {
@@ -129,5 +129,5 @@
       "torrentleech"
     ]
   },
-  "last_scan": "2026-08-09"
+  "last_scan": "2026-08-16"
 }
