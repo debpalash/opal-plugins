@@ -44,6 +44,23 @@ Written by `.github/workflows/catalog-reachability.yml`. A probe runs from a dat
 
 <!-- BEGIN AUTOMATED-SCANS (managed by .github/workflows/catalog-reachability.yml) -->
 
+### 2026-08-23 07:22 UTC
+
+Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 25, `confirmed`: 34, `error-500`: 2, `unknown`: 4.
+
+| id | file | was | now |
+|---|---|---|---|
+| `hi10anime` | `anime_ddl` in `ddl-sources.json` | `unknown` | `confirmed` |
+
+Notes:
+
+- `royalroad` (reading-sources.json): https://www.royalroad.com redirects to https://www.royalroad.com/home (catalog url left as-is; confirm before editing)
+- `rutracker` (torrent-sources.json): https://rutracker.org redirects to https://rutracker.org/forum/index.php (catalog url left as-is; confirm before editing)
+- `torr9` (torrent-sources.json): https://torr9.net redirects to https://tr4ker.net/ (catalog url left as-is; confirm before editing)
+- `erai-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+- `beatrice-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `server-error`
+- `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+
 ### 2026-08-16 07:20 UTC
 
 Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 25, `confirmed`: 34, `error-500`: 1, `unknown`: 5.
