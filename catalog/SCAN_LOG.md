@@ -44,6 +44,25 @@ Written by `.github/workflows/catalog-reachability.yml`. A probe runs from a dat
 
 <!-- BEGIN AUTOMATED-SCANS (managed by .github/workflows/catalog-reachability.yml) -->
 
+### 2026-08-30 12:18 UTC
+
+Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 26, `confirmed`: 34, `error-500`: 1, `unknown`: 4.
+
+| id | file | was | now |
+|---|---|---|---|
+| `comicbookplus` | `comics` in `reading-sources.json` | `confirmed` | `blocked-from-ci` |
+| `nekobt` | `sources` in `torrent-sources.json` | `confirmed` | `unknown` |
+| `uztracker` | `sources` in `torrent-sources.json` | `unknown` | `confirmed` |
+
+Notes:
+
+- `royalroad` (reading-sources.json): https://www.royalroad.com redirects to https://www.royalroad.com/home (catalog url left as-is; confirm before editing)
+- `rutracker` (torrent-sources.json): https://rutracker.org redirects to https://rutracker.org/forum/index.php (catalog url left as-is; confirm before editing)
+- `torr9` (torrent-sources.json): https://torr9.net redirects to https://tr4ker.net/ (catalog url left as-is; confirm before editing)
+- `uztracker` (torrent-sources.json): https://uztracker.net redirects to https://www.DropCatch.com/domain/uztracker.net (catalog url left as-is; confirm before editing)
+- `erai-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+- `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+
 ### 2026-08-23 07:22 UTC
 
 Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 25, `confirmed`: 34, `error-500`: 2, `unknown`: 4.

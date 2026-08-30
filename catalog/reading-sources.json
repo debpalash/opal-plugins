@@ -55,7 +55,7 @@
       "type": "comics",
       "url": "https://comicbookplus.com",
       "engine": "needs:html-scrape",
-      "reachable": "confirmed",
+      "reachable": "blocked-from-ci",
       "notes": "PUBLIC-DOMAIN / golden-age comics only — legal, safe to prioritize."
     }
   ],
@@ -111,5 +111,5 @@
       "notes": "Check LibGen OPDS mirror — Opal already has an OPDS engine, so this could be near-free to wire."
     }
   ],
-  "last_scan": "2026-08-02"
+  "last_scan": "2026-08-30"
 }
