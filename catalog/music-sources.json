@@ -49,7 +49,7 @@
       "url": "https://downloads.khinsider.com",
       "api": null,
       "engine": "needs:html-scrape",
-      "reachable": "blocked-from-ci",
+      "reachable": "confirmed",
       "notes": "Video-game soundtrack archive (MP3/FLAC). Niche but durable and popular."
     }
   ],
@@ -92,5 +92,5 @@
     }
   ],
   "note_soulseek": "The classic p2p music source (Soulseek/slskd) is a protocol, not a URL endpoint — it would need a client integration, not a plugin entry.",
-  "last_scan": "2026-08-09"
+  "last_scan": "2026-09-06"
 }
