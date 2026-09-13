@@ -44,6 +44,22 @@ Written by `.github/workflows/catalog-reachability.yml`. A probe runs from a dat
 
 <!-- BEGIN AUTOMATED-SCANS (managed by .github/workflows/catalog-reachability.yml) -->
 
+### 2026-09-13 12:19 UTC
+
+Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 25, `confirmed`: 34, `error-500`: 2, `unknown`: 4.
+
+| id | file | was | now |
+|---|---|---|---|
+| `rapidmoviez` | `release_group_ddl` in `ddl-sources.json` | `confirmed` | `error-500` |
+
+Notes:
+
+- `royalroad` (reading-sources.json): https://www.royalroad.com redirects to https://www.royalroad.com/home (catalog url left as-is; confirm before editing)
+- `rutracker` (torrent-sources.json): https://rutracker.org redirects to https://rutracker.org/forum/index.php (catalog url left as-is; confirm before editing)
+- `torr9` (torrent-sources.json): https://torr9.net redirects to https://tr4ker.net/ (catalog url left as-is; confirm before editing)
+- `erai-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+- `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+
 ### 2026-09-06 11:23 UTC
 
 Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 25, `confirmed`: 35, `error-500`: 1, `unknown`: 4.

@@ -17,7 +17,7 @@
       "type": "ddl",
       "url": "https://rmz.cr",
       "engine": "needs:html-scrape",
-      "reachable": "confirmed",
+      "reachable": "error-500",
       "notes": "Long-running release DDL index."
     },
     {
@@ -129,5 +129,5 @@
       "torrentleech"
     ]
   },
-  "last_scan": "2026-08-23"
+  "last_scan": "2026-09-13"
 }
