@@ -38,6 +38,31 @@ as pasted wiki JSON and scanned from that:
 - mediasavvy.wiki deep pages.
 - FMHY `downloading.md` (DDL) not yet mined beyond `video.md`'s section.
 
+## Opal connector expansion — 2026-09-29
+
+Implemented and probed through the matching Opal adapters:
+
+- NekoBT: JSON search → magnets (50 sampled anime releases).
+- Shana Project: episode search → torrent downloads (50 sampled releases).
+- Public Domain Torrents: movie catalog → downloadable torrent metadata.
+- Royal Road and NovelFire: search → chapter lists → extracted reading text.
+- Weeb Central and ComicBookPlus: listing → chapter/viewer image-page URLs;
+  the app served first-page image bytes for both.
+- Audius: public tracks and stream URLs; two range probes returned audio bytes.
+- Added official NASA, BBC Global News and NPR Up First RSS feed definitions.
+
+ComicBookPlus serves Opal's application User-Agent but rejected the generic
+Chrome User-Agent. Its search filters the fetched latest-upload pages. Opal's
+current reader caps are 128 comic pages and 400 novel chapters. No torrent media
+or full audio file was downloaded during these checks.
+One repeated NovelFire chapter request failed transiently; reopening the same
+chapter succeeded.
+
+Erai-raws, AcgnX, BT4G and MangaNato probes failed from this network. AnimeParadise
+rendered its landing page but its assets were blocked. GetComics and KHInsider
+responded; their download chains remain candidates. WuxiaClick needs a valid
+search adapter rather than promotion based on a generic listing response.
+
 ## Automated reachability scans
 
 Written by `.github/workflows/catalog-reachability.yml`. A probe runs from a datacenter IP, so `blocked-from-ci` and `unknown` mean *we could not see the site*, not that it is gone. Everything above this line is hand-written and is never modified by the workflow.
