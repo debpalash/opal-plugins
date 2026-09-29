@@ -185,9 +185,9 @@
       "url": "https://subsplease.org",
       "search": "https://subsplease.org/shows/{query}/",
       "api": "https://subsplease.org/api/ (JSON schedule/releases) + RSS",
-      "engine": "needs:json-or-rss",
-      "reachable": "confirmed-community",
-      "notes": "Major current-season subgroup. Public JSON API + RSS → engine-cheap and high-value. r/Piracy anime GOAT."
+      "engine": "existing:subsplease",
+      "reachable": "confirmed",
+      "notes": "Promoted to the SubsPlease anime connector: exact series + episode lookup through the JSON release API. Verified 2026-09-29; magnet lookup confirmed, playback remains dependent on peers."
     },
     {
       "id": "erai-raws",
