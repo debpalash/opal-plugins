@@ -16,9 +16,9 @@
       "name": "Weeb Central",
       "type": "manga",
       "url": "https://weebcentral.com",
-      "engine": "needs:html-scrape",
-      "reachable": "blocked-from-ci",
-      "notes": "Successor to MangaSee-style readers; active."
+      "engine": "existing:weebcentral",
+      "reachable": "confirmed",
+      "notes": "Implemented manga search and oldest-available-chapter image reader; verified page metadata in Opal on 2026-09-29."
     },
     {
       "id": "manganato",
@@ -54,9 +54,9 @@
       "name": "ComicBookPlus",
       "type": "comics",
       "url": "https://comicbookplus.com",
-      "engine": "needs:html-scrape",
-      "reachable": "blocked-from-ci",
-      "notes": "PUBLIC-DOMAIN / golden-age comics only — legal, safe to prioritize."
+      "engine": "existing:comicbookplus",
+      "reachable": "confirmed",
+      "notes": "Implemented public-domain comic upload listings and image reader; query filters fetched latest-upload pages. Reader limit: 128 pages. Verified 2026-09-29."
     }
   ],
   "lightnovel": [
@@ -66,18 +66,18 @@
       "type": "novels",
       "url": "https://www.royalroad.com",
       "api": "has public-ish API + RSS per-fiction",
-      "engine": "needs:adapter (fits novels.zig source_config pattern)",
+      "engine": "existing:royalroad",
       "reachable": "confirmed",
-      "notes": "Original/self-published web serials — LEGAL user-posted content. Best novels candidate; author-permitted."
+      "notes": "Implemented original web-serial search, chapter directory and text reader; verified in Opal on 2026-09-29."
     },
     {
       "id": "novelfire",
       "name": "NovelFire",
       "type": "novels",
       "url": "https://novelfire.net",
-      "engine": "needs:html-scrape",
-      "reachable": "blocked-from-ci",
-      "notes": "Active light-novel reader."
+      "engine": "existing:novelfire",
+      "reachable": "confirmed",
+      "notes": "Implemented novel search, paginated chapter directory and text reader; verified in Opal on 2026-09-29. Reader limit: 400 chapters."
     },
     {
       "id": "wuxiaclick",

@@ -38,9 +38,9 @@
       "type": "music-stream",
       "url": "https://audius.co",
       "api": "https://api.audius.co (documented, keyless, decentralized)",
-      "engine": "needs:json-adapter",
+      "engine": "existing:audius",
       "reachable": "confirmed",
-      "notes": "Fully legal decentralized music, open API. Strong fit for a streaming music tab."
+      "notes": "Implemented public track search and trending; two audio stream range probes returned audio bytes on 2026-09-29. Access-conditioned tracks are omitted."
     },
     {
       "id": "khinsider",

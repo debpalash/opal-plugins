@@ -75,9 +75,9 @@
       "url": "https://www.publicdomaintorrents.info",
       "search": null,
       "api": null,
-      "engine": "needs:html-scrape",
+      "engine": "existing:publicdomaintorrents",
       "reachable": "confirmed",
-      "notes": "Legal public-domain films only — safest of the set, good candidate to prioritize. From FMHY."
+      "notes": "Implemented public-domain movie catalog connector; sampled detail links returned BitTorrent metadata on 2026-09-29."
     },
     {
       "id": "nekobt",
@@ -85,21 +85,21 @@
       "type": "torrent",
       "url": "https://nekobt.to",
       "search": null,
-      "api": null,
-      "engine": "needs:html-scrape",
+      "api": "https://nekobt.to/api/v1/torrents/search?query={query}&sort_by=seeders",
+      "engine": "existing:nekobt",
       "reachable": "confirmed",
-      "notes": "Anime torrents. 500 from CI (reachable, server hiccup). From FMHY anime-torrenting."
+      "notes": "Implemented NekoBT JSON search connector; 50 anime release magnets verified 2026-09-29. No torrent content downloaded."
     },
     {
       "id": "shanaproject",
       "name": "ShanaProject",
       "type": "torrent",
       "url": "https://www.shanaproject.com",
-      "search": "https://www.shanaproject.com/search/{query}/",
-      "api": "rss: https://www.shanaproject.com/feeds/latest/",
-      "engine": "needs:html-scrape-or-rss",
+      "search": "https://www.shanaproject.com/search/?title={query}",
+      "api": "rss: https://www.shanaproject.com/feeds/site/",
+      "engine": "existing:shanaproject",
       "reachable": "confirmed",
-      "notes": "Anime release tracker with RSS. Confirmed 200. RSS makes this engine-cheap. From FMHY anime-torrenting."
+      "notes": "Implemented episode-search connector; 50 torrent links verified 2026-09-29. Swarm counts are unknown."
     },
     {
       "id": "idope",
