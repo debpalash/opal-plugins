@@ -211,3 +211,14 @@ Notes:
 - `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
 
 <!-- END AUTOMATED-SCANS -->
+
+
+## 2026-10-03 — verified content completeness additions
+
+Added three installable definitions, bringing the synchronized catalog to 88:
+ComicFury (public creator-hosted full page images), HiAnime (configured exact-episode
+ZokoAnime HLS resolution), and Waveform (publisher RSS with complete audio episodes).
+Repository research used pinned keiyoushi and ani-cli contracts; implementation is
+independent Opal GPL-3.0 code. Real response/media probes and limitations are recorded
+in Opal `data/source-research.json` and `docs/browse-sources.md`. A definition remains
+inactive until installed, and its existence does not guarantee provider uptime.
