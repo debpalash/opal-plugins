@@ -1,4 +1,9 @@
 {
-  "base": "https://yts.mx",
-  "api": "https://yts.mx/api/v2/list_movies.json"
+  "base": "https://yts.gg",
+  "api": "https://movies-api.accel.li/api/v2/list_movies.json",
+  "mirrors": [
+    "https://yts.gg",
+    "https://yts.lt",
+    "https://yts.am"
+  ]
 }

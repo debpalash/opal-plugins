@@ -1,3 +1,7 @@
 {
-  "base": "https://www.limetorrents.fun"
+  "base": "https://www.limetorrents.cc",
+  "mirrors": [
+    "https://limetorrents.cc",
+    "https://www.limetorrents.lol"
+  ]
 }

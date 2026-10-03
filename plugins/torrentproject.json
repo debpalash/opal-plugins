@@ -1,3 +1,6 @@
 {
-  "base": "https://torrentproject2.net"
+  "base": "https://torrentproject.com.se",
+  "mirrors": [
+    "https://torrentproject.com.se"
+  ]
 }

@@ -1,4 +1,9 @@
 {
   "base": "https://eztvx.to",
-  "api": "https://eztvx.to/api/get-torrents"
+  "api": "https://eztvx.to/api/get-torrents",
+  "calendar": "https://eztvx.to/calendar/",
+  "countdown": "https://eztvx.to/countdown/",
+  "mirrors": [
+    "https://eztv1.xyz"
+  ]
 }
