@@ -27,11 +27,13 @@ archived mirror. See [`lists/README.md`](lists/README.md) for the schema.
 
 ## Current catalog
 
-The catalog contains 88 source definitions and matches Opal's bundled manifest.
+The catalog contains 90 source definitions and matches Opal's bundled manifest.
 The October 2026 expansion adds DMHY, ACG.RIP, Standard Ebooks, WuxiaClick,
 Openverse, Archive Netlabels, and SomaFM. SubsPlease also supports keyword
 release search. A further verified expansion adds ComicFury full-page reading,
-HiAnime direct episode streams, and the Waveform publisher podcast feed. These additions require an Opal build containing the matching
+HiAnime direct episode streams, and the Waveform publisher podcast feed.
+xkcd adds official title archive/number search and static comic reading; SMBC adds
+recent RSS discovery and full main-panel reading. These additions require an Opal build containing the matching
 connectors; endpoint definitions alone do not install executable adapters.
 
 Provider contracts, repository provenance, verified responses, and limits are

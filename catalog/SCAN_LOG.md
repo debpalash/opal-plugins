@@ -222,3 +222,12 @@ Repository research used pinned keiyoushi and ani-cli contracts; implementation 
 independent Opal GPL-3.0 code. Real response/media probes and limitations are recorded
 in Opal `data/source-research.json` and `docs/browse-sources.md`. A definition remains
 inactive until installed, and its existence does not guarantee provider uptime.
+
+
+## 2026-10-04 — verified public webcomics
+
+Added xkcd and SMBC definitions (90 total), with independent bounded archive/RSS
+search and full main-image reader in Opal. xkcd archive+JSON+image and SMBC
+RSS+work+image probes succeeded; image transfers were limited to1024bytes.
+Original KHInsider albums403, Manganato403, AnimeParadiseAPIunverified, not added.
+Detailed pinned GitHub provenance and limits are in Opal data/source-research.json.

@@ -1,5 +1,5 @@
 {
-  "note": "Curated manga/comic/light-novel/ebook source candidates for Opal. Same rules as torrent-sources.json: not in the live manifest; each needs a matching app engine (or fits an existing one — see `engine`). Deduped against sources Opal already handles: MangaDex (hardcoded keyless), Nyaa (torrent), and the existing readallcomics / heancms / mangathemesia / madara / novels scrapers. Source: FMHY reading list.",
+  "note": "Curated manga/comic/light-novel/ebook source candidates for Opal. Same rules as torrent-sources.json: not in the live manifest; each needs a matching app engine (or fits an existing one \u2014 see `engine`). Deduped against sources Opal already handles: MangaDex (hardcoded keyless), Nyaa (torrent), and the existing readallcomics / heancms / mangathemesia / madara / novels scrapers. Source: FMHY reading list.",
   "schema": 1,
   "manga": [
     {
@@ -47,7 +47,7 @@
       "url": "https://getcomics.org",
       "engine": "needs:html-scrape-ddl",
       "reachable": "confirmed",
-      "notes": "Comics DDL (CBR/CBZ links). Different shape from readallcomics (reader) — this is a download index."
+      "notes": "Comics DDL (CBR/CBZ links). Different shape from readallcomics (reader) \u2014 this is a download index."
     },
     {
       "id": "comicbookplus",
@@ -57,6 +57,24 @@
       "engine": "existing:comicbookplus",
       "reachable": "confirmed",
       "notes": "Implemented public-domain comic upload listings and image reader; query filters fetched latest-upload pages. Reader limit: 128 pages. Verified 2026-09-29."
+    },
+    {
+      "id": "xkcd",
+      "name": "xkcd",
+      "type": "comics",
+      "url": "https://xkcd.com",
+      "engine": "existing:webcomic_sources",
+      "reachable": "confirmed",
+      "notes": "Official full title archive/exact numeric query; bounded6metadata rows with full staticimage reader. Interactive versions stay on publisher site."
+    },
+    {
+      "id": "smbc",
+      "name": "Saturday Morning Breakfast Cereal",
+      "type": "comics",
+      "url": "https://www.smbc-comics.com",
+      "engine": "existing:webcomic_sources",
+      "reachable": "confirmed",
+      "notes": "Official recentRSS titlequery; directfullmainpanel reader. Fullarchive/bonuspanel unsupported."
     }
   ],
   "lightnovel": [
@@ -108,8 +126,8 @@
       "api": "JSON/OPDS mirrors exist",
       "engine": "needs:adapter (OPDS mirror may fit existing opds engine)",
       "reachable": "confirmed",
-      "notes": "Check LibGen OPDS mirror — Opal already has an OPDS engine, so this could be near-free to wire."
+      "notes": "Check LibGen OPDS mirror \u2014 Opal already has an OPDS engine, so this could be near-free to wire."
     }
   ],
-  "last_scan": "2026-08-30"
+  "last_scan": "2026-10-04"
 }
