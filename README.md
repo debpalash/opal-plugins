@@ -24,3 +24,15 @@ the fuller `anime*.json` / `manga*.json` snapshots). Served raw from
 exposed as the `lists` plugin so an alternate mirror can override the base.
 Consolidated here from the former `debpalash/lists` repo, which is now an
 archived mirror. See [`lists/README.md`](lists/README.md) for the schema.
+
+## Current catalog
+
+The catalog contains 85 source definitions and matches Opal's bundled manifest.
+The October 2026 expansion adds DMHY, ACG.RIP, Standard Ebooks, WuxiaClick,
+Openverse, Archive Netlabels, and SomaFM. SubsPlease also supports keyword
+release search. These additions require an Opal build containing the matching
+connectors; endpoint definitions alone do not install executable adapters.
+
+Provider contracts, repository provenance, verified responses, and limits are
+recorded in [Opal's source guide](https://github.com/debpalash/Opal/blob/main/docs/browse-sources.md).
+The `catalog/` files retain the earlier user-supplied research inventories.

@@ -1,3 +1,7 @@
 {
-  "base": "https://therarbg.com"
+  "base": "https://therarbg.com",
+  "mirrors": [
+    "https://therarbg.com",
+    "https://therarbg.to"
+  ]
 }

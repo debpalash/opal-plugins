@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "name": "Opal Plugins",
-  "description": "Source endpoints for Opal. The app holds the connector code; these supply the URLs and enable the source. Install writes ~/.config/opal/plugins/sources/<id>.json. Torrent ids match the nova2 engine that runs them; stremio entries add a Stremio add-on (one URL, many sources).",
+  "description": "Source endpoints for Opal. The app holds the connector code; these supply the URLs and enable the source. Install writes ~/.config/opal/plugins/sources/<id>.json. Torrent ids match the nova2 engine that runs them; stremio entries add a Stremio add-on (one URL, many sources). Two optional endpoint fields apply to any source: \"mirrors\" (a list, or a comma-separated string, of alternate origins tried in order when \"base\" is unreachable/blocked) and, for torznab, \"path\" (the endpoint template, \"{indexer}\" substituted).",
   "plugins": [
     {
       "id": "apibay",
@@ -27,10 +27,15 @@
       "id": "yts",
       "name": "YTS (movies)",
       "type": "torrent",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "endpoints": {
-        "base": "https://yts.mx",
-        "api": "https://yts.mx/api/v2/list_movies.json"
+        "base": "https://yts.gg",
+        "api": "https://movies-api.accel.li/api/v2/list_movies.json",
+        "mirrors": [
+          "https://yts.gg",
+          "https://yts.lt",
+          "https://yts.am"
+        ]
       },
       "file": "plugins/yts.json"
     },
@@ -38,10 +43,15 @@
       "id": "eztv",
       "name": "EZTV (TV)",
       "type": "torrent",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "endpoints": {
         "base": "https://eztvx.to",
-        "api": "https://eztvx.to/api/get-torrents"
+        "api": "https://eztvx.to/api/get-torrents",
+        "calendar": "https://eztvx.to/calendar/",
+        "countdown": "https://eztvx.to/countdown/",
+        "mirrors": [
+          "https://eztv1.xyz"
+        ]
       },
       "file": "plugins/eztv.json"
     },
@@ -56,22 +66,16 @@
       "file": "plugins/nyaa.json"
     },
     {
-      "id": "kickass",
-      "name": "KickAss",
-      "type": "torrent",
-      "version": "1.0.0",
-      "endpoints": {
-        "base": "https://kickasstorrents.to"
-      },
-      "file": "plugins/kickass.json"
-    },
-    {
       "id": "limetorrents",
       "name": "LimeTorrents",
       "type": "torrent",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "endpoints": {
-        "base": "https://www.limetorrents.fun"
+        "base": "https://www.limetorrents.cc",
+        "mirrors": [
+          "https://limetorrents.cc",
+          "https://www.limetorrents.lol"
+        ]
       },
       "file": "plugins/limetorrents.json"
     },
@@ -89,9 +93,12 @@
       "id": "torrentproject",
       "name": "TorrentProject",
       "type": "torrent",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "endpoints": {
-        "base": "https://torrentproject2.net"
+        "base": "https://torrentproject.com.se",
+        "mirrors": [
+          "https://torrentproject.com.se"
+        ]
       },
       "file": "plugins/torrentproject.json"
     },
@@ -129,11 +136,57 @@
       "id": "jackett",
       "name": "Jackett (self-hosted)",
       "type": "torrent",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "endpoints": {
-        "base": "http://127.0.0.1:9117"
+        "base": "http://127.0.0.1:9117",
+        "apikey": "YOUR_API_KEY_HERE"
       },
       "file": "plugins/jackett.json"
+    },
+    {
+      "id": "torznab",
+      "name": "Torznab (Jackett / Prowlarr / bitmagnet)",
+      "type": "torrent",
+      "version": "1.1.0",
+      "endpoints": {
+        "base": "",
+        "path": "/api/v2.0/indexers/{indexer}/results/torznab/api",
+        "apikey": "",
+        "indexer": "all"
+      }
+    },
+    {
+      "id": "prowlarr",
+      "name": "Prowlarr (self-hosted)",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "http://127.0.0.1:9696",
+        "path": "/api/v1/indexer/{indexer}/newznab",
+        "apikey": "",
+        "indexer": "1"
+      }
+    },
+    {
+      "id": "bitmagnet",
+      "name": "bitmagnet (self-hosted)",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "http://127.0.0.1:3333",
+        "path": "/torznab/api",
+        "apikey": "",
+        "indexer": "all"
+      }
+    },
+    {
+      "id": "internetarchive",
+      "name": "Internet Archive",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://archive.org"
+      }
     },
     {
       "id": "readallcomics",
@@ -149,7 +202,7 @@
       "id": "subsplease",
       "name": "SubsPlease (anime releases)",
       "type": "anime",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "endpoints": {
         "base": "https://subsplease.org"
       },
@@ -164,6 +217,15 @@
         "base": "https://animepahe.pw"
       },
       "file": "plugins/animepahe.json"
+    },
+    {
+      "id": "lists",
+      "name": "Anime Lists (airing index)",
+      "type": "anime",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://raw.githubusercontent.com/debpalash/opal-plugins/main/lists"
+      }
     },
     {
       "id": "torrentio",
@@ -190,7 +252,7 @@
     },
     {
       "id": "comet",
-      "name": "Comet · debrid (Stremio)",
+      "name": "Comet \u00b7 debrid (Stremio)",
       "type": "stremio",
       "version": "1.0.0",
       "endpoints": {
@@ -314,9 +376,13 @@
       "id": "therarbg",
       "name": "TheRARBG",
       "type": "torrent",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "endpoints": {
-        "base": "https://therarbg.com"
+        "base": "https://therarbg.com",
+        "mirrors": [
+          "https://therarbg.com",
+          "https://therarbg.to"
+        ]
       },
       "file": "plugins/therarbg.json"
     },
@@ -356,7 +422,7 @@
       "type": "torrent",
       "version": "1.0.0",
       "endpoints": {
-        "base": "https://bitsearch.eu"
+        "base": "https://bitsearch.to"
       },
       "file": "plugins/bitsearch.json"
     },
@@ -396,7 +462,7 @@
       "type": "torrent",
       "version": "1.0.0",
       "endpoints": {
-        "base": "https://www.tokyotosho.info/"
+        "base": "http://tokyotosho.info"
       },
       "file": "plugins/tokyotoshokan.json"
     },
@@ -411,14 +477,58 @@
       "file": "plugins/torrentfunk.json"
     },
     {
-      "id": "lists",
-      "name": "Anime Lists (airing index)",
-      "type": "anime",
+      "id": "peerflix",
+      "name": "Peerflix",
+      "type": "stremio",
       "version": "1.0.0",
       "endpoints": {
-        "base": "https://raw.githubusercontent.com/debpalash/opal-plugins/main/lists"
-      },
-      "file": "plugins/lists.json"
+        "stremio": "https://peerflix.mov/manifest.json"
+      }
+    },
+    {
+      "id": "aiostreams",
+      "name": "AIOStreams",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://aiostreams.elfhosted.com/stremio/manifest.json"
+      }
+    },
+    {
+      "id": "easynews-plus",
+      "name": "Easynews+",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://b89262c192b0-stremio-easynews-addon.baby-beamup.club/manifest.json"
+      }
+    },
+    {
+      "id": "plutotv",
+      "name": "Pluto TV",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://dev.nebulawp.org/stremio/pluto-tv-addon/manifest.json"
+      }
+    },
+    {
+      "id": "trakt",
+      "name": "Trakt Lists",
+      "type": "stremio",
+      "version": "1.0.0",
+      "endpoints": {
+        "stremio": "https://2ecbbd610840-trakt.baby-beamup.club/manifest.json"
+      }
+    },
+    {
+      "id": "knaben",
+      "name": "Knaben",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://api.knaben.org/v1"
+      }
     },
     {
       "id": "allanime",
@@ -440,6 +550,182 @@
         "base": "https://iptv-org.github.io/api"
       },
       "file": "plugins/iptv-org.json"
+    },
+    {
+      "id": "iptv-org-index",
+      "name": "IPTV - iptv-org full index",
+      "type": "iptv-m3u",
+      "version": "1.0.0",
+      "endpoints": {
+        "url": "https://iptv-org.github.io/iptv/index.m3u"
+      },
+      "file": "plugins/iptv-org-index.json"
+    },
+    {
+      "id": "free-tv",
+      "name": "IPTV - Free-TV (global)",
+      "type": "iptv-m3u",
+      "version": "1.0.0",
+      "endpoints": {
+        "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8"
+      },
+      "file": "plugins/free-tv.json"
+    },
+    {
+      "id": "m3upt",
+      "name": "IPTV - M3UPT (Portugal)",
+      "type": "iptv-m3u",
+      "version": "1.0.0",
+      "endpoints": {
+        "url": "https://raw.githubusercontent.com/LITUATUI/M3UPT/main/M3U/M3UPT.m3u"
+      },
+      "file": "plugins/m3upt.json"
+    },
+    {
+      "id": "iptv-italia",
+      "name": "IPTV - Italia",
+      "type": "iptv-m3u",
+      "version": "1.0.0",
+      "endpoints": {
+        "url": "https://raw.githubusercontent.com/Tundrak/IPTV-Italia/main/iptvita.m3u"
+      },
+      "file": "plugins/iptv-italia.json"
+    },
+    {
+      "id": "youtube-live",
+      "name": "IPTV - YouTube Live channels",
+      "type": "iptv-m3u",
+      "version": "1.0.0",
+      "endpoints": {
+        "url": "https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/youtube.m3u"
+      },
+      "file": "plugins/youtube-live.json"
+    },
+    {
+      "id": "tdtchannels",
+      "name": "IPTV - TDTChannels (Spain/Portugal)",
+      "type": "iptv-m3u",
+      "version": "1.0.0",
+      "endpoints": {
+        "url": "https://www.tdtchannels.com/lists/tv.m3u8"
+      },
+      "file": "plugins/tdtchannels.json"
+    },
+    {
+      "id": "pluto-tv",
+      "name": "IPTV - Pluto TV (FAST)",
+      "type": "iptv-m3u",
+      "version": "1.0.0",
+      "endpoints": {
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_all.m3u"
+      },
+      "file": "plugins/pluto-tv.json"
+    },
+    {
+      "id": "samsung-tvplus",
+      "name": "IPTV - Samsung TV Plus (FAST)",
+      "type": "iptv-m3u",
+      "version": "1.0.0",
+      "endpoints": {
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/samsungtvplus_all.m3u"
+      },
+      "file": "plugins/samsung-tvplus.json"
+    },
+    {
+      "id": "plex-tv",
+      "name": "IPTV - Plex (FAST)",
+      "type": "iptv-m3u",
+      "version": "1.0.0",
+      "endpoints": {
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_all.m3u"
+      },
+      "file": "plugins/plex-tv.json"
+    },
+    {
+      "id": "roku-tv",
+      "name": "IPTV - The Roku Channel (FAST)",
+      "type": "iptv-m3u",
+      "version": "1.0.0",
+      "endpoints": {
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/roku_all.m3u"
+      },
+      "file": "plugins/roku-tv.json"
+    },
+    {
+      "id": "tubi-tv",
+      "name": "IPTV - Tubi (FAST)",
+      "type": "iptv-m3u",
+      "version": "1.0.0",
+      "endpoints": {
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/tubi_all.m3u"
+      },
+      "file": "plugins/tubi-tv.json"
+    },
+    {
+      "id": "suwayomi",
+      "name": "Suwayomi (Mihon extensions)",
+      "type": "suwayomi",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "http://localhost:4567",
+        "source": ""
+      },
+      "file": "plugins/suwayomi.json"
+    },
+    {
+      "id": "mihon",
+      "name": "Mihon extension repos",
+      "type": "mihon-repos",
+      "version": "1.0.0",
+      "note": "Register these index.min.json catalog URLs on your Suwayomi server (Extension repos), then install extensions. See https://wotaku.wiki/ext/mihon",
+      "repos": [
+        {
+          "name": "Keiyoushi",
+          "kind": "manga",
+          "url": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json"
+        },
+        {
+          "name": "Yuzono (manga)",
+          "kind": "manga",
+          "url": "https://raw.githubusercontent.com/yuzono/manga-repo/repo/index.min.json"
+        },
+        {
+          "name": "Suwayomi",
+          "kind": "manga",
+          "url": "https://raw.githubusercontent.com/Suwayomi/tachiyomi-extension/repo/index.min.json"
+        },
+        {
+          "name": "Yuzono (anime)",
+          "kind": "anime",
+          "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+        },
+        {
+          "name": "Secozzi (anime)",
+          "kind": "anime",
+          "url": "https://raw.githubusercontent.com/Secozzi/aniyomi-extensions/refs/heads/repo/index.min.json"
+        }
+      ]
+    },
+    {
+      "id": "subsonic",
+      "name": "Subsonic / Navidrome (Music)",
+      "type": "music",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "http://localhost:4533",
+        "user": "",
+        "pass": ""
+      },
+      "file": "plugins/subsonic.json"
+    },
+    {
+      "id": "listenbrainz",
+      "name": "ListenBrainz (music discovery)",
+      "type": "music",
+      "version": "1.0.0",
+      "endpoints": {
+        "enabled": "1"
+      }
     },
     {
       "id": "nekobt",
@@ -560,6 +846,76 @@
         "base": "https://feed.animetosho.org"
       },
       "note": "Public JSON release search with canonical magnets and provider size/swarm metadata. Requires an Opal build with this connector."
+    },
+    {
+      "id": "dmhy",
+      "name": "DMHY (anime releases)",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://share.dmhy.org"
+      },
+      "file": "plugins/dmhy.json"
+    },
+    {
+      "id": "acgrip",
+      "name": "ACG.RIP (anime releases)",
+      "type": "torrent",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://acg.rip"
+      },
+      "file": "plugins/acgrip.json"
+    },
+    {
+      "id": "standardebooks",
+      "name": "Standard Ebooks",
+      "type": "novels",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://standardebooks.org"
+      },
+      "file": "plugins/standardebooks.json"
+    },
+    {
+      "id": "wuxiaclick",
+      "name": "WuxiaClick",
+      "type": "novels",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://wuxia.click"
+      },
+      "file": "plugins/wuxiaclick.json"
+    },
+    {
+      "id": "openverse",
+      "name": "Openverse (licensed music)",
+      "type": "music",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://api.openverse.org"
+      },
+      "file": "plugins/openverse.json"
+    },
+    {
+      "id": "netlabels",
+      "name": "Internet Archive Netlabels",
+      "type": "music",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://archive.org"
+      },
+      "file": "plugins/netlabels.json"
+    },
+    {
+      "id": "somafm",
+      "name": "SomaFM",
+      "type": "radio",
+      "version": "1.0.0",
+      "endpoints": {
+        "base": "https://somafm.com"
+      },
+      "file": "plugins/somafm.json"
     }
   ]
 }
