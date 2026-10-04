@@ -1,5 +1,5 @@
 {
-  "note": "Curated manga/comic/light-novel/ebook source candidates for Opal. Same rules as torrent-sources.json: not in the live manifest; each needs a matching app engine (or fits an existing one \u2014 see `engine`). Deduped against sources Opal already handles: MangaDex (hardcoded keyless), Nyaa (torrent), and the existing readallcomics / heancms / mangathemesia / madara / novels scrapers. Source: FMHY reading list.",
+  "note": "Curated manga/comic/light-novel/ebook source candidates for Opal. Same rules as torrent-sources.json: not in the live manifest; each needs a matching app engine (or fits an existing one — see `engine`). Deduped against sources Opal already handles: MangaDex (hardcoded keyless), Nyaa (torrent), and the existing readallcomics / heancms / mangathemesia / madara / novels scrapers. Source: FMHY reading list.",
   "schema": 1,
   "manga": [
     {
@@ -17,7 +17,7 @@
       "type": "manga",
       "url": "https://weebcentral.com",
       "engine": "existing:weebcentral",
-      "reachable": "confirmed",
+      "reachable": "blocked-from-ci",
       "notes": "Implemented manga search and oldest-available-chapter image reader; verified page metadata in Opal on 2026-09-29."
     },
     {
@@ -47,7 +47,7 @@
       "url": "https://getcomics.org",
       "engine": "needs:html-scrape-ddl",
       "reachable": "confirmed",
-      "notes": "Comics DDL (CBR/CBZ links). Different shape from readallcomics (reader) \u2014 this is a download index."
+      "notes": "Comics DDL (CBR/CBZ links). Different shape from readallcomics (reader) — this is a download index."
     },
     {
       "id": "comicbookplus",
@@ -55,7 +55,7 @@
       "type": "comics",
       "url": "https://comicbookplus.com",
       "engine": "existing:comicbookplus",
-      "reachable": "confirmed",
+      "reachable": "blocked-from-ci",
       "notes": "Implemented public-domain comic upload listings and image reader; query filters fetched latest-upload pages. Reader limit: 128 pages. Verified 2026-09-29."
     },
     {
@@ -85,7 +85,7 @@
       "url": "https://www.royalroad.com",
       "api": "has public-ish API + RSS per-fiction",
       "engine": "existing:royalroad",
-      "reachable": "confirmed",
+      "reachable": "blocked-from-ci",
       "notes": "Implemented original web-serial search, chapter directory and text reader; verified in Opal on 2026-09-29."
     },
     {
@@ -94,7 +94,7 @@
       "type": "novels",
       "url": "https://novelfire.net",
       "engine": "existing:novelfire",
-      "reachable": "confirmed",
+      "reachable": "blocked-from-ci",
       "notes": "Implemented novel search, paginated chapter directory and text reader; verified in Opal on 2026-09-29. Reader limit: 400 chapters."
     },
     {
@@ -126,7 +126,7 @@
       "api": "JSON/OPDS mirrors exist",
       "engine": "needs:adapter (OPDS mirror may fit existing opds engine)",
       "reachable": "confirmed",
-      "notes": "Check LibGen OPDS mirror \u2014 Opal already has an OPDS engine, so this could be near-free to wire."
+      "notes": "Check LibGen OPDS mirror — Opal already has an OPDS engine, so this could be near-free to wire."
     }
   ],
   "last_scan": "2026-10-04"
