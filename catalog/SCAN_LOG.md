@@ -69,6 +69,24 @@ Written by `.github/workflows/catalog-reachability.yml`. A probe runs from a dat
 
 <!-- BEGIN AUTOMATED-SCANS (managed by .github/workflows/catalog-reachability.yml) -->
 
+### 2026-10-11 13:35 UTC
+
+Probed **67** catalog urls from a GitHub runner. `blocked-from-ci`: 28, `confirmed`: 34, `error-500`: 1, `unknown`: 4.
+
+| id | file | was | now |
+|---|---|---|---|
+| `khinsider` | `legal_api` in `music-sources.json` | `confirmed` | `blocked-from-ci` |
+| `idope` | `sources` in `torrent-sources.json` | `confirmed` | `blocked-from-ci` |
+| `torr9` | `sources` in `torrent-sources.json` | `error-500` | `confirmed` |
+| `rustorka` | `sources` in `torrent-sources.json` | `blocked-from-ci` | `unknown` |
+
+Notes:
+
+- `rutracker` (torrent-sources.json): https://rutracker.org redirects to https://rutracker.org/forum/index.php (catalog url left as-is; confirm before editing)
+- `torr9` (torrent-sources.json): https://torr9.net redirects to https://tr4ker.net/ (catalog url left as-is; confirm before editing)
+- `erai-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+- `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+
 ### 2026-10-04 12:53 UTC
 
 Probed **67** catalog urls from a GitHub runner. `blocked-from-ci`: 27, `confirmed`: 35, `error-500`: 2, `unknown`: 3.
@@ -193,22 +211,6 @@ Notes:
 - `torr9` (torrent-sources.json): https://torr9.net redirects to https://tr4ker.net/ (catalog url left as-is; confirm before editing)
 - `erai-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
 - `beatrice-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `server-error`
-- `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
-
-### 2026-08-16 07:20 UTC
-
-Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 25, `confirmed`: 34, `error-500`: 1, `unknown`: 5.
-
-| id | file | was | now |
-|---|---|---|---|
-| `hi10anime` | `anime_ddl` in `ddl-sources.json` | `confirmed` | `unknown` |
-
-Notes:
-
-- `royalroad` (reading-sources.json): https://www.royalroad.com redirects to https://www.royalroad.com/home (catalog url left as-is; confirm before editing)
-- `rutracker` (torrent-sources.json): https://rutracker.org redirects to https://rutracker.org/forum/index.php (catalog url left as-is; confirm before editing)
-- `torr9` (torrent-sources.json): https://torr9.net redirects to https://tr4ker.net/ (catalog url left as-is; confirm before editing)
-- `erai-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
 - `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
 
 <!-- END AUTOMATED-SCANS -->
