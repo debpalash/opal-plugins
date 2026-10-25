@@ -29,7 +29,7 @@
       "url": "https://www.miruro.com",
       "api": "consumet/anilist-style backend",
       "engine": "needs:json-adapter",
-      "reachable": "blocked-from-ci",
+      "reachable": "confirmed",
       "notes": "Rides a Consumet/AniList backend; if it exposes a stable proxy, one adapter could cover several front-ends."
     }
   ],
@@ -87,5 +87,5 @@
       "notes": "All-in-one anime/manga/music/games tracker with an API. Legal metadata."
     }
   ],
-  "last_scan": "2026-07-29"
+  "last_scan": "2026-10-25"
 }
