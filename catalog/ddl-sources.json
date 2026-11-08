@@ -17,7 +17,7 @@
       "type": "ddl",
       "url": "https://rmz.cr",
       "engine": "needs:html-scrape",
-      "reachable": "confirmed",
+      "reachable": "blocked-from-ci",
       "notes": "Long-running release DDL index."
     },
     {
@@ -26,7 +26,7 @@
       "type": "ddl",
       "url": "https://psa.wf",
       "engine": "needs:html-scrape",
-      "reachable": "blocked-from-ci",
+      "reachable": "unknown",
       "notes": "PSA release group DDL. Filehost links (needs a debrid/host resolver downstream)."
     }
   ],
@@ -47,7 +47,7 @@
       "type": "anime-ddl",
       "url": "https://kayoanime.com",
       "engine": "needs:html-scrape",
-      "reachable": "blocked-from-ci",
+      "reachable": "confirmed",
       "notes": "Google-Drive-backed anime DDL. Link-resolution is the hard part."
     },
     {
@@ -65,7 +65,7 @@
       "type": "anime-ddl",
       "url": "https://new.anidl.org",
       "engine": "needs:html-scrape",
-      "reachable": "blocked-from-ci",
+      "reachable": "confirmed",
       "notes": "Anime DDL index."
     },
     {
@@ -107,7 +107,7 @@
       "type": "ddl-scene",
       "url": "https://scnlog.me",
       "engine": "needs:html-scrape",
-      "reachable": "blocked-from-ci",
+      "reachable": "confirmed",
       "notes": "Scene release DB, music-leaning. r/Piracy all-purpose."
     },
     {
@@ -129,5 +129,5 @@
       "torrentleech"
     ]
   },
-  "last_scan": "2026-11-01"
+  "last_scan": "2026-11-08"
 }

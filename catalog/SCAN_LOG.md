@@ -69,6 +69,42 @@ Written by `.github/workflows/catalog-reachability.yml`. A probe runs from a dat
 
 <!-- BEGIN AUTOMATED-SCANS (managed by .github/workflows/catalog-reachability.yml) -->
 
+### 2026-11-08 13:55 UTC
+
+Probed **67** catalog urls from a GitHub runner. `blocked-from-ci`: 12, `confirmed`: 48, `error-500`: 2, `unknown`: 5.
+
+| id | file | was | now |
+|---|---|---|---|
+| `animeonsen` | `api_backed` in `anime-sources.json` | `blocked-from-ci` | `confirmed` |
+| `kurozora` | `metadata_and_quality` in `anime-sources.json` | `blocked-from-ci` | `confirmed` |
+| `rapidmoviez` | `release_group_ddl` in `ddl-sources.json` | `confirmed` | `blocked-from-ci` |
+| `psarips` | `release_group_ddl` in `ddl-sources.json` | `blocked-from-ci` | `unknown` |
+| `kayoanime` | `anime_ddl` in `ddl-sources.json` | `blocked-from-ci` | `confirmed` |
+| `anidl` | `anime_ddl` in `ddl-sources.json` | `blocked-from-ci` | `confirmed` |
+| `scnlog` | `warez_scene` in `ddl-sources.json` | `blocked-from-ci` | `confirmed` |
+| `bandcamp` | `legal_api` in `music-sources.json` | `blocked-from-ci` | `confirmed` |
+| `mangafire` | `manga` in `reading-sources.json` | `blocked-from-ci` | `confirmed` |
+| `weebcentral` | `manga` in `reading-sources.json` | `blocked-from-ci` | `confirmed` |
+| `mangago` | `manga` in `reading-sources.json` | `blocked-from-ci` | `confirmed` |
+| `comicbookplus` | `comics` in `reading-sources.json` | `blocked-from-ci` | `confirmed` |
+| `novelfire` | `lightnovel` in `reading-sources.json` | `blocked-from-ci` | `confirmed` |
+| `filemood` | `sources` in `torrent-sources.json` | `confirmed` | `blocked-from-ci` |
+| `torrentquest` | `sources` in `torrent-sources.json` | `blocked-from-ci` | `confirmed` |
+| `rarbgdump` | `sources` in `torrent-sources.json` | `blocked-from-ci` | `confirmed` |
+| `developify` | `sources` in `torrent-sources.json` | `blocked-from-ci` | `confirmed` |
+| `torrentdownload` | `sources` in `torrent-sources.json` | `blocked-from-ci` | `confirmed` |
+
+Notes:
+
+- `animeonsen` (anime-sources.json): https://animeonsen.xyz redirects to https://www.animeonsen.xyz/ (catalog url left as-is; confirm before editing)
+- `seadex` (anime-sources.json): https://releases.moe redirects to https://seadex.moe/ (catalog url left as-is; confirm before editing)
+- `anidl` (ddl-sources.json): https://new.anidl.org redirects to https://anidl.org/ (catalog url left as-is; confirm before editing)
+- `rutracker` (torrent-sources.json): https://rutracker.org redirects to https://rutracker.org/forum/index.php (catalog url left as-is; confirm before editing)
+- `idope` (torrent-sources.json): https://idope.se redirects to https://bastacasinonutanspelpaus.net/ (catalog url left as-is; confirm before editing)
+- `torr9` (torrent-sources.json): https://torr9.net redirects to https://tr4ker.net/ (catalog url left as-is; confirm before editing)
+- `erai-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+- `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+
 ### 2026-11-01 13:50 UTC
 
 Probed **67** catalog urls from a GitHub runner. `blocked-from-ci`: 26, `confirmed`: 35, `error-500`: 2, `unknown`: 4.
@@ -198,22 +234,6 @@ Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 25, `confirm
 |---|---|---|---|
 | `rapidmoviez` | `release_group_ddl` in `ddl-sources.json` | `error-500` | `confirmed` |
 | `hi10anime` | `anime_ddl` in `ddl-sources.json` | `confirmed` | `unknown` |
-
-Notes:
-
-- `royalroad` (reading-sources.json): https://www.royalroad.com redirects to https://www.royalroad.com/home (catalog url left as-is; confirm before editing)
-- `rutracker` (torrent-sources.json): https://rutracker.org redirects to https://rutracker.org/forum/index.php (catalog url left as-is; confirm before editing)
-- `torr9` (torrent-sources.json): https://torr9.net redirects to https://tr4ker.net/ (catalog url left as-is; confirm before editing)
-- `erai-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
-- `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
-
-### 2026-09-13 12:19 UTC
-
-Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 25, `confirmed`: 34, `error-500`: 2, `unknown`: 4.
-
-| id | file | was | now |
-|---|---|---|---|
-| `rapidmoviez` | `release_group_ddl` in `ddl-sources.json` | `confirmed` | `error-500` |
 
 Notes:
 

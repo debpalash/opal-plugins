@@ -29,7 +29,7 @@
       "url": "https://bandcamp.com",
       "api": "unofficial (mobile API); legal artist-uploaded catalog",
       "engine": "needs:adapter",
-      "reachable": "blocked-from-ci",
+      "reachable": "confirmed",
       "notes": "Legal, artist-licensed. Good for discovery + streaming free/name-your-price tracks."
     },
     {
@@ -92,5 +92,5 @@
     }
   ],
   "note_soulseek": "The classic p2p music source (Soulseek/slskd) is a protocol, not a URL endpoint — it would need a client integration, not a plugin entry.",
-  "last_scan": "2026-11-01"
+  "last_scan": "2026-11-08"
 }
