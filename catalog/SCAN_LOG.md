@@ -69,6 +69,27 @@ Written by `.github/workflows/catalog-reachability.yml`. A probe runs from a dat
 
 <!-- BEGIN AUTOMATED-SCANS (managed by .github/workflows/catalog-reachability.yml) -->
 
+### 2026-11-15 06:52 UTC
+
+Probed **67** catalog urls from a GitHub runner. `blocked-from-ci`: 11, `confirmed`: 50, `error-500`: 2, `unknown`: 4.
+
+| id | file | was | now |
+|---|---|---|---|
+| `rapidmoviez` | `release_group_ddl` in `ddl-sources.json` | `blocked-from-ci` | `confirmed` |
+| `psarips` | `release_group_ddl` in `ddl-sources.json` | `unknown` | `confirmed` |
+| `filemood` | `sources` in `torrent-sources.json` | `blocked-from-ci` | `confirmed` |
+| `idope` | `sources` in `torrent-sources.json` | `confirmed` | `blocked-from-ci` |
+
+Notes:
+
+- `animeonsen` (anime-sources.json): https://animeonsen.xyz redirects to https://www.animeonsen.xyz/ (catalog url left as-is; confirm before editing)
+- `seadex` (anime-sources.json): https://releases.moe redirects to https://seadex.moe/ (catalog url left as-is; confirm before editing)
+- `anidl` (ddl-sources.json): https://new.anidl.org redirects to https://anidl.org/ (catalog url left as-is; confirm before editing)
+- `rutracker` (torrent-sources.json): https://rutracker.org redirects to https://rutracker.org/forum/index.php (catalog url left as-is; confirm before editing)
+- `torr9` (torrent-sources.json): https://torr9.net redirects to https://tr4ker.net/ (catalog url left as-is; confirm before editing)
+- `erai-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+- `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
+
 ### 2026-11-08 13:55 UTC
 
 Probed **67** catalog urls from a GitHub runner. `blocked-from-ci`: 12, `confirmed`: 48, `error-500`: 2, `unknown`: 5.
@@ -217,23 +238,6 @@ Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 25, `confirm
 | `lucida` | `stream_rippers` in `music-sources.json` | `blocked-from-ci` | `confirmed` |
 | `idope` | `sources` in `torrent-sources.json` | `unknown` | `confirmed` |
 | `torrentdownload` | `sources` in `torrent-sources.json` | `confirmed` | `blocked-from-ci` |
-
-Notes:
-
-- `royalroad` (reading-sources.json): https://www.royalroad.com redirects to https://www.royalroad.com/home (catalog url left as-is; confirm before editing)
-- `rutracker` (torrent-sources.json): https://rutracker.org redirects to https://rutracker.org/forum/index.php (catalog url left as-is; confirm before editing)
-- `torr9` (torrent-sources.json): https://torr9.net redirects to https://tr4ker.net/ (catalog url left as-is; confirm before editing)
-- `erai-raws` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
-- `acgnx` (torrent-sources.json): kept `community` (community-vouched); CI saw `blocked`
-
-### 2026-09-20 11:53 UTC
-
-Probed **65** catalog urls from a GitHub runner. `blocked-from-ci`: 25, `confirmed`: 34, `error-500`: 1, `unknown`: 5.
-
-| id | file | was | now |
-|---|---|---|---|
-| `rapidmoviez` | `release_group_ddl` in `ddl-sources.json` | `error-500` | `confirmed` |
-| `hi10anime` | `anime_ddl` in `ddl-sources.json` | `confirmed` | `unknown` |
 
 Notes:
 
