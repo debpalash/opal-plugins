@@ -27,7 +27,15 @@ archived mirror. See [`lists/README.md`](lists/README.md) for the schema.
 
 ## Current catalog
 
-The catalog contains 90 source definitions and matches Opal's bundled manifest.
+The catalog contains 191 source definitions and matches Opal's bundled manifest.
+The November 2026 expansion adds nine torrent indexes (AniRena, Kisssub,
+AniLibria, FitGirl, AudioBook Bay, NNM-Club, TorrentKitty, LinuxTracker, FOSS
+Torrents), two Stremio add-ons (TorrentsDB, StremThru Torz), three reading sites,
+32 radio stations, 26 podcast feeds, nine IPTV playlists and the Internet Archive
+Live Music Archive. It also repoints moved endpoints (Bitsearch, LimeTorrents,
+Tokyo Toshokan, TorrentGalaxy, TorrentProject, Comet, MediaFusion, Peerflix,
+HiAnime) and removes ReadAllComics and AniDB.app, whose domains now serve
+unrelated sites.
 The October 2026 expansion adds DMHY, ACG.RIP, Standard Ebooks, WuxiaClick,
 Openverse, Archive Netlabels, and SomaFM. SubsPlease also supports keyword
 release search. A further verified expansion adds ComicFury full-page reading,

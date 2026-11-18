@@ -1,3 +1,6 @@
 {
-  "base": "https://hianime.at"
+  "base": "https://hianime.fm",
+  "mirrors": [
+    "https://hianime.at"
+  ]
 }

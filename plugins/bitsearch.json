@@ -1,3 +1,6 @@
 {
-  "base": "https://bitsearch.to"
+  "base": "https://bitsearch.eu",
+  "mirrors": [
+    "https://bitsearch.to"
+  ]
 }

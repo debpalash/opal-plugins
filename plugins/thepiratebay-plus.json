@@ -1,5 +1,5 @@
 {
-  "stremio": "https://thepiratebay-plus.strem.fun/manifest.json",
+  "stremio": "https://torrentio.strem.fun/providers=thepiratebay/manifest.json",
   "types": "movie,series",
-  "debrid": "https://thepiratebay-plus.strem.fun/{provider}={key}/manifest.json"
+  "debrid": "https://torrentio.strem.fun/providers=thepiratebay|{provider}={key}/manifest.json"
 }

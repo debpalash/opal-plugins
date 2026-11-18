@@ -1,3 +1,7 @@
 {
-  "base": "http://tokyotosho.info"
+  "base": "https://tokyo-tosho.net",
+  "mirrors": [
+    "https://tokyo-tosho.net",
+    "https://www.tokyotosho.info"
+  ]
 }

@@ -1,3 +1,6 @@
 {
-  "base": "https://solidtorrents.to"
+  "base": "https://bitsearch.eu",
+  "mirrors": [
+    "https://solidtorrents.to"
+  ]
 }
