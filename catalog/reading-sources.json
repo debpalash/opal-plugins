@@ -8,7 +8,7 @@
       "type": "manga",
       "url": "https://mangafire.to",
       "engine": "needs:html-scrape",
-      "reachable": "confirmed",
+      "reachable": "blocked-from-ci",
       "notes": "Popular manga aggregator, custom layout (not madara/themesia). High-value target."
     },
     {
@@ -55,7 +55,7 @@
       "type": "comics",
       "url": "https://comicbookplus.com",
       "engine": "existing:comicbookplus",
-      "reachable": "confirmed",
+      "reachable": "blocked-from-ci",
       "notes": "Implemented public-domain comic upload listings and image reader; query filters fetched latest-upload pages. Reader limit: 128 pages. Verified 2026-09-29."
     },
     {
@@ -129,5 +129,5 @@
       "notes": "Check LibGen OPDS mirror — Opal already has an OPDS engine, so this could be near-free to wire."
     }
   ],
-  "last_scan": "2026-11-08"
+  "last_scan": "2026-11-22"
 }
